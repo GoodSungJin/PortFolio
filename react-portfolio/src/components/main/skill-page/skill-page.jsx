@@ -57,7 +57,7 @@ const SkillPage = () => {
                   <span>{item.name}</span>
                   <span>{item.proficiency}%</span>
                 </Dt>
-                <dl>{item.value}</dl>
+                <dd>{item.value}</dd>
               </div>
             )
           })}

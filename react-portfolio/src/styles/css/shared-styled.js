@@ -15,7 +15,7 @@ export const H3Infomation = styled.h3`
   margin-bottom: 5vh;
 
   @media ${Tablet} {
-    width: 230px;
+    width: 13%;
   }
 
   @media ${Desktop} {

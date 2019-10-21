@@ -5,6 +5,7 @@ import { Desktop, Tablet } from '../../../styles/css/shared-styled'
 export const SectionSkill = styled.section`
   width: 100vw;
   text-align: center;
+  padding-bottom: 75px;
 `;
 
 export const DivContain = styled.div`
@@ -60,14 +61,17 @@ export const Dl = styled.dl`
   display: flex;
   justify-content: space-between;
   flex-wrap:  wrap;
+  
+
   div {
     display: inline-block;
     /* width: 486px; */
     margin-bottom: 3vh;
 
-    dl {
+    dd {
       /* width: 100%; */
       /* height: 70px; */
+      
       font-size: 1.1rem;
       line-height: 1.7rem;
       color: #7a7a7a;
@@ -75,10 +79,11 @@ export const Dl = styled.dl`
   }
 
   @media ${Tablet} {
+    width: 87%;
     div {
       width: 32.227vw;
 
-      dl {
+      dd {
         line-height: 2.3rem;
       }
       
@@ -90,7 +95,7 @@ export const Dl = styled.dl`
 
     div {
       width: ${100 * 486 / 1920}vw;
-      dl {
+      dd {
         font-size: 1.6rem;
       }
     }
