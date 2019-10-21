@@ -1,5 +1,5 @@
 import React from 'react';
-import { H3Infomation } from '../../../styles/css/shared-styled';
+import { H3Infomation } from '../../../../styles/css/shared-styled';
 import { SectionStrength, DivContain, Dl, Dt } from './strength-page-styled';
 
 const StrengthPage = () => {

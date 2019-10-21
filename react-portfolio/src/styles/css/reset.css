@@ -79,4 +79,11 @@ html {
 
 body {
 	font-family: 'Noto Sans KR Regular';
+
+}
+
+@media screen and (min-width: 1200px) {
+	body {
+		overflow: hidden;
+	}
 }

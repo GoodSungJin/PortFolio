@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Desktop, Tablet } from '../../../styles/css/shared-styled'
+import { Desktop, Tablet } from '../../../styles/css/shared-styled';
 
-import MainBG from '../../../styles/image/portfolio-bg.jpg'
+import MainBG from '../../../styles/image/portfolio-bg.jpg';
 
 
 export const SectionMain = styled.section`
@@ -14,7 +14,6 @@ export const SectionMain = styled.section`
   text-align: center;
 
   @media ${Desktop} {
-    overflow: auto;
   }
 `;
 

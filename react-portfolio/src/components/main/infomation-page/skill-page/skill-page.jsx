@@ -1,7 +1,7 @@
 import React from 'react';
-import { H3Infomation } from '../../../styles/css/shared-styled';
+import { H3Infomation } from '../../../../styles/css/shared-styled';
 import { DivContain, SectionSkill, P, Dl, Dt } from './skill-page-styled';
-import img from '../../../styles/image/react.svg'
+import img from '../../../../styles/image/react.svg'
 
 const SkillPage = () => {
   const skillState = [

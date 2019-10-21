@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Desktop, Tablet } from '../../../styles/css/shared-styled'
+import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 
 export const SectionStrength = styled.section`
   background-color: #ece4db;
