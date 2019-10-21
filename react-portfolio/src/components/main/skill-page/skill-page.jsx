@@ -50,9 +50,9 @@ const SkillPage = () => {
       <DivContain>
         <H3Infomation>Skill</H3Infomation>
         <Dl>
-          {skillState.map(item => {
+          {skillState.map((item, idx) => {
             return (
-              <div>
+              <div key={idx + item}>
                 <Dt proficiency={item.proficiency}>
                   <span>{item.name}</span>
                   <span>{item.proficiency}%</span>
