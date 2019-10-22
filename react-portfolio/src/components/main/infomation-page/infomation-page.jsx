@@ -6,9 +6,9 @@ import StrengthPage from './strength-page/strength-page.jsx';
 import ProjectPage from './project-page/project-page.jsx'
 
 
-const InfomationPage = ({ refInfomationPage }) => {
+const InfomationPage = ({ refInfo }) => {
   return (
-    <Div ref={refInfomationPage}>
+    <Div ref={refInfo}>
       <SkillPage />
       <StrengthPage />
       <ProjectPage />
