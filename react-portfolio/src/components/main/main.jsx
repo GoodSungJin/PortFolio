@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useRef, useEffect } from 'react';
 import { MainTag } from './main-styled';
 
 import MainPage from './main-page/main-page.jsx';
@@ -26,25 +26,41 @@ const Main = () => {
   const refMainPage = useRef()
 
   const onWheelScroll = (e) => {
-    if (pageScroll && refInfomationPage.current.scrollTop === 0) {
+    if (refInfomationPage.current.scrollTop !== 0) return;
+    if (pageScroll) {
       if (e.deltaY > 0 && window.scrollY < refInfomationPage.current.offsetTop) {
         dispatch({ type: 'SET_PAGESCROLL', pageScroll: false });
         window.scrollBy({ top: refInfomationPage.current.offsetTop, behavior: 'smooth' });
-
+        
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
-        }, 1000);
+
+          if (refInfomationPage.current.style.overflowY) return;
+          
+          refInfomationPage.current.style.overflowY = "scroll";
+          refInfomationPage.current.style.overflowX = "hidden";
+          
+        }, 600);
       } 
       else if (e.deltaY < 0 && window.scrollY === refInfomationPage.current.offsetTop) {
         dispatch({ type: 'SET_PAGESCROLL', pageScroll: false });
         window.scroll({ top: 0, behavior: 'smooth' });
+        
 
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
-        }, 1000);
+          refInfomationPage.current.scrollTop = 0;
+        }, 600);
       }
     }
   }
+
+  useEffect(() => {
+    if (window.scrollY === refInfomationPage.current.offsetTop) {
+      refInfomationPage.current.style.overflowY = "scroll";
+      refInfomationPage.current.style.overflowX = "hidden";
+    }
+  }, [])
 
 
   return (
