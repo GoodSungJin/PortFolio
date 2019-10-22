@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b31af805eb8911098570e5b41dab386",
+    "revision": "677e2e2d947089cf860e0abf04e3d646",
     "url": "/PortFolio/index.html"
   },
   {
-    "revision": "57f3adae362b7fc6efd2",
-    "url": "/PortFolio/static/css/main.c00c7809.chunk.css"
+    "revision": "5a92a7537b16e8eb162c",
+    "url": "/PortFolio/static/css/main.1602c562.chunk.css"
   },
   {
-    "revision": "8f4adf20f1da15ba4a90",
-    "url": "/PortFolio/static/js/2.f7b94963.chunk.js"
+    "revision": "3e3a8f33cde573f700e1",
+    "url": "/PortFolio/static/js/2.8568f27e.chunk.js"
   },
   {
-    "revision": "57f3adae362b7fc6efd2",
-    "url": "/PortFolio/static/js/main.99e7cf14.chunk.js"
+    "revision": "5a92a7537b16e8eb162c",
+    "url": "/PortFolio/static/js/main.02971eea.chunk.js"
   },
   {
     "revision": "c501042fb4ff7d612a1f",
@@ -22,6 +22,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "49c56daa4f52da2c09465803c7cfdff1",
     "url": "/PortFolio/static/media/NotoSans-Regular.49c56daa.otf"
+  },
+  {
+    "revision": "4cc2d9655d64bc90ac15782c3ee68af5",
+    "url": "/PortFolio/static/media/megabox.4cc2d965.jpg"
   },
   {
     "revision": "20bb33e47200124ac762289436c8928f",
