@@ -43,6 +43,33 @@ export const P = styled.p`
   margin: 0 auto;
 
 
+  position: relative;
+  border-right: 2px solid rgba(255,255,255,.75);
+  overflow: hidden;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+
+
+  @keyframes typewriter{
+    0% {
+      width: 0;
+    }
+    
+    50% {
+    }
+    
+    100% {
+      width: 100%;
+    }
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+
+
+
   span {
     display: block;
 
@@ -52,11 +79,23 @@ export const P = styled.p`
   }
 
   @media ${Tablet} {
-    width: 100%;
     text-align: center;
+    width: 100%;
+    white-space: nowrap;
+
+    @keyframes typewriter{
+      0% {
+        width: 0;
+      }
+      
+      100% {
+        width: 100%;
+      }
+    }
         
     span {
-      display: unset;
+      display: inline-block;
+      
 
       &:first-child {
         margin-right: 5vw;
@@ -67,18 +106,32 @@ export const P = styled.p`
   @media ${Desktop} {
     font-size: 4.3rem;
     letter-spacing: 1.72rem;
-    min-width: 1200px;
-    width: 1200px;
+    /* min-width: 1200px;
+    width: 1200px; */
     margin-top: unset;
     line-height: 6rem;
 
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     position:absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -60%);
     white-space: nowrap;
+
+    @keyframes typewriter{
+    0% {
+      width: 0;
+    }
+    
+    50% {
+    }
+    
+    100% {
+      justify-content: space-between;
+      width: 1200px;
+    }
+  }
 
     span {
       &:first-child {

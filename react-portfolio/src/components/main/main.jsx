@@ -36,7 +36,7 @@ const Main = () => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
 
           if (refInfomationPage.current.style.overflowY) return;
-          
+
           refInfomationPage.current.style.overflowY = "scroll";
           refInfomationPage.current.style.overflowX = "hidden";
           
@@ -56,7 +56,7 @@ const Main = () => {
   }
 
   useEffect(() => {
-    if (window.scrollY === refInfomationPage.current.offsetTop) {
+    if (window.scrollY >= refInfomationPage.current.offsetTop) {
       refInfomationPage.current.style.overflowY = "scroll";
       refInfomationPage.current.style.overflowX = "hidden";
     }

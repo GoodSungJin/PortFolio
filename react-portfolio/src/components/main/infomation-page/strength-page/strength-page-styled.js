@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 
 export const SectionStrength = styled.section`
+  width: 100vw;
   background-color: #ece4db;
   padding: 75px 0;
   text-align: center;

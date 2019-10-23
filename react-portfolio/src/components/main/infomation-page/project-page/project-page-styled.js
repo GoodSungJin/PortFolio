@@ -3,6 +3,7 @@ import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 import img from '../../../../styles/image/project/megabox.jpg'
 
 export const SectionProject = styled.section`
+  width: 100vw;
   padding: 75px 0;
   text-align: center;
 `;
@@ -30,6 +31,10 @@ export const DivFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  .modal-content {
+    font-size: 3rem;
+  }
 
   @media ${Tablet} {
     width: 87%;
