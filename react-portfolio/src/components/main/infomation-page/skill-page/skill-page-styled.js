@@ -63,41 +63,59 @@ export const Dl = styled.dl`
   flex-wrap:  wrap;
   
 
-  div {
-    display: inline-block;
-    /* width: 486px; */
-    margin-bottom: 3vh;
-
-    dd {
-      /* width: 100%; */
-      /* height: 70px; */
-      
-      font-size: 1.1rem;
-      line-height: 1.7rem;
-      color: #7a7a7a;
-    }
-  }
-
   @media ${Tablet} {
     width: 87%;
-    div {
-      width: 32.227vw;
-
-      dd {
-        line-height: 2.3rem;
-      }
-      
-    }
   }
 
   @media ${Desktop} {
     width: ${100 * (1410 - 230) / 1920}vw;
+  }
+`;
+
+export const DivInDl = styled.div`
+  position: relative;
+  display: inline-block;
+  /* width: 486px; */
+  margin-bottom: 3vh;
+
+  dd {
+    /* width: 100%; */
+    /* height: 70px; */
+    
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    color: #7a7a7a;
+  }
+
+  @media ${Tablet} {
+    width: 32.227vw;
+
+    dd {
+      line-height: 2.3rem;
+    }
+  }
+
+  @media ${Desktop} {
+    width: ${100 * 546 / 1920}vw;
+    display: flex;
+
+    &:before {
+      content: '';
+      display: inline-flex;
+      width: ${100 * 50 / 1920}vw;
+      background-image: url(${props => props.img});
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 15px;
+      margin-top: 10px;
+    }
 
     div {
-      width: ${100 * 486 / 1920}vw;
-      dd {
-        font-size: 1.6rem;
-      }
+      width: 100%;
+    }
+
+    dd {
+      font-size: 1.6rem;
     }
   }
 `;
@@ -135,6 +153,7 @@ export const Dt = styled.dt`
 
 
   @media ${Tablet} {
+
     span {
       &:first-child {
         display: inline-block;

@@ -19,7 +19,7 @@ export const H3Infomation = styled.h3`
   }
 
   @media ${Desktop} {
-    width: ${100 * 230 / 1920}vw;
+    width: ${100 * 225 / 1920}vw;
   }
 `;
 

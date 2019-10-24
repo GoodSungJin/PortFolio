@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
-import img from '../../../../styles/image/project/megabox.jpg'
+
 
 export const SectionProject = styled.section`
   width: 100vw;
@@ -33,12 +33,31 @@ export const DivFlex = styled.div`
   justify-content: space-between;
 
   .modal-content {
-    font-size: 3rem;
+    
   }
 
-  @media ${Tablet} {
-    width: 87%;
+@media ${Tablet} {
+  width: 87%;
+  .modal-content {
+    
+    .modal-header {
+    }
+
+    .modal-body {
+      display: flex;
+
+      h5 {
+        width: 20vw;
+        font-size: 2rem;
+        color: #575757;
+      }
+
+      p {
+        font-size: 2.5rem;
+      }
+    }
   }
+}
 `;
 
 export const Figure = styled.figure`
@@ -63,7 +82,7 @@ export const Figure = styled.figure`
 `;
 
 export const Img = styled.img.attrs({
-  src: img
+  src: props => props.img
 })`
   width: 100%;
   height: 200px;
@@ -85,3 +104,4 @@ export const SpanTime = styled.span`
   /* line-height: 3rem; */
   color: #7a7a7a;
 `;
+
