@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c68ad8005849757cf76cd80dbd663f95",
+    "revision": "b39730a78069989201ad3cf14badf8d7",
     "url": "/PortFolio/index.html"
   },
   {
-    "revision": "3e5b903b75cbf357c4b2",
-    "url": "/PortFolio/static/css/main.8680f703.chunk.css"
+    "revision": "34676cb7e77596faa757",
+    "url": "/PortFolio/static/css/main.9af0ad9f.chunk.css"
   },
   {
-    "revision": "d09b8264a69fc844a8c5",
-    "url": "/PortFolio/static/js/2.7ed85f95.chunk.js"
+    "revision": "1f84cb80c92055b16cb2",
+    "url": "/PortFolio/static/js/2.f46997a5.chunk.js"
   },
   {
-    "revision": "3e5b903b75cbf357c4b2",
-    "url": "/PortFolio/static/js/main.f8ead3f4.chunk.js"
+    "revision": "34676cb7e77596faa757",
+    "url": "/PortFolio/static/js/main.5a692f91.chunk.js"
   },
   {
     "revision": "c501042fb4ff7d612a1f",
@@ -46,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2d2e31cc63a96c7e6044f52d30fd21b9",
     "url": "/PortFolio/static/media/javascript.2d2e31cc.svg"
+  },
+  {
+    "revision": "8275179856a806120eb2dc7f445bd74e",
+    "url": "/PortFolio/static/media/megabox-reserve.82751798.jpg"
   },
   {
     "revision": "4cc2d9655d64bc90ac15782c3ee68af5",
