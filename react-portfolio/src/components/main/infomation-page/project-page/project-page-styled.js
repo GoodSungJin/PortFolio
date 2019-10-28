@@ -43,19 +43,6 @@ export const DivFlex = styled.div`
     .modal-header {
     }
 
-    .modal-body {
-      display: flex;
-
-      h5 {
-        width: 20vw;
-        font-size: 2rem;
-        color: #575757;
-      }
-
-      p {
-        font-size: 2.5rem;
-      }
-    }
   }
 }
 `;
@@ -105,3 +92,123 @@ export const SpanTime = styled.span`
   color: #7a7a7a;
 `;
 
+export const ModalTime = styled.span`
+
+
+  @media ${Desktop} {
+    font-size: 1.5rem;
+    color: #7a7a7a;
+    line-height: 3rem;
+    align-self: flex-end;
+    margin-left: 1vw;
+  }
+`;
+
+export const ModalHead = styled.div`
+  padding: 3rem;
+`;
+
+export const ModalBody = styled.div`
+  > div {
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+
+  }
+
+  h5 {
+    line-height: 2.5rem;
+    font-size: 2rem;
+    color: #575757;
+    width: 95px;
+  }
+
+  p {
+    color: #222;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .intro {
+    display: flex;
+    width: 50%;
+
+    p {
+      width: ${100 * 434 / 1920}vw;
+    }
+  }
+
+  .sub-intro {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+
+    p {
+      width: ${100 * 375 / 1920}vw;
+    }
+
+    > div {
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    /* display: flex; */
+    width: 91%;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
+  }
+`;
+
+export const Li = styled.li`
+  width: 48%;
+  border: 2px solid;
+  padding: 15px;
+  border-radius: 1%;
+  border-color: cornflowerblue;
+  margin-bottom: 45px;
+
+  &:nth-child(even) {
+    float: right;
+
+  }
+
+  &:nth-child(odd) {
+    float: left;
+  }
+
+
+  &:before {
+    content: '';
+    display: block;
+    background-image: url(${props => props.innerImg});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+
+  span {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  dt {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+
+  }
+  dd {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    white-space: pre-line;
+  }
+`;
