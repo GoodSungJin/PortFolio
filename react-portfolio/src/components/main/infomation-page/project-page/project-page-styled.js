@@ -114,7 +114,12 @@ export const ModalBody = styled.div`
     padding: 3rem;
     justify-content: space-between;
 
+  &:nth-child(1) {
+    background-color: #ece4db;
+
   }
+  }
+
 
   h5 {
     line-height: 2.5rem;
@@ -167,11 +172,11 @@ export const ModalBody = styled.div`
 
 export const Li = styled.li`
   width: 48%;
-  border: 2px solid;
   padding: 15px;
-  border-radius: 1%;
-  border-color: cornflowerblue;
   margin-bottom: 45px;
+  /* border: 2px solid;
+  border-radius: 1%;
+  border-color: cornflowerblue; */
 
   &:nth-child(even) {
     float: right;
