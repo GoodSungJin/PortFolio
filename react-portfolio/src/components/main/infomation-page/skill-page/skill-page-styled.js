@@ -134,7 +134,7 @@ export const Dt = styled.dt`
 
     &:last-child {
       font-size: 1rem;
-      color: #53c1de;
+      color: #404040;
       vertical-align: bottom;
       /* position: relative; */
 
@@ -145,7 +145,7 @@ export const Dt = styled.dt`
         margin-right: 5%;
         height: 6px;
         border-radius: 50px;
-        background: linear-gradient( to right, #53c1de ${props => props.proficiency}%, #e8e8e8 ${props => props.proficiency}%);
+        background: linear-gradient( to right, ${props => props.color} ${props => props.proficiency}%, #e8e8e8 ${props => props.proficiency}%);
       }
 
     }
