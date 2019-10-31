@@ -4,6 +4,7 @@ import { Desktop, Tablet } from '../../styles/css/shared-styled';
 import img from '../../styles/image/logo.png'
 
 export const SectionHeader = styled.section`
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,6 +50,8 @@ export const Nav = styled.nav`
     font-size: 2rem;
 
     li {
+      cursor: pointer;
+      
       &:nth-child(n+2) {
         margin-left: 20px;
 
@@ -58,7 +61,6 @@ export const Nav = styled.nav`
           margin-right: 20px;
         }
       }
-
     }
   }
 `;

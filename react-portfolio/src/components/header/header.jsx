@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 
-const Header = () => {
+const Header = ({ refMainPage, refInfomationPage }) => {
+  const [navState, setnavState] = useState(['Home', 'Skill', 'Strength', 'Project']);
+
   const scrollHome = (e) => {
     e.preventDefault();
-    window.scroll({ top: 0, behavior: 'smooth' });
+    refInfomationPage.current.scrollTop = 0;
+    refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
   };
+  // b.scrollIntoView({ behavior: 'smooth' })
+  const moveElem = (item) => {
+    if (item === 'Home') {
+      refInfomationPage.current.scrollTop = 0;
+      refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+      return;
+    }
+    if (item === 'Skill') {
+      refInfomationPage.current.childNodes[0].scrollIntoView({ block: "start", behavior: 'smooth' });
+      return;
+    }
+    if (item === 'Strength') {
+      // console.log(refMainPage.current.childNodes)
+      refInfomationPage.current.childNodes[1].scrollIntoView({ block: "start", behavior: 'smooth' });
+      return;
+    }
+    if (item === 'Project') {
+      // console.log(refMainPage.current.childNodes)
+      refInfomationPage.current.childNodes[2].scrollIntoView({ block: "end", behavior: 'smooth' });
+      return;
+    }
 
+  };
 
   return (
     <SectionHeader>
@@ -16,10 +41,11 @@ const Header = () => {
         </H1HOME>
         <Nav>
           <ul>
-            <li>HOME</li>
-            <li>Skill</li>
-            <li>Strength</li>
-            <li>Project</li>
+            {navState.map((item, idx) => {
+              return (
+                <li onClick={() => moveElem(item)}>{item}</li>
+              )
+            })}
           </ul>
         </Nav>
       </DivContain>
