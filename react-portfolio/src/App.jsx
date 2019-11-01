@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useRef, useState, useEffect } from 'react';
 import './App.css';
 
 import Main from './components/main/main';
@@ -23,10 +23,11 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { pageScroll } = state;
+  const [scrollState, setscrollState] = useState('Home');
   const refInfomationPage = useRef()
   const refMainPage = useRef()
   
-  const onWheelScroll = (e) => {
+  const onWheelScroll = (e) => {    
     if (refInfomationPage.current.scrollTop !== 0) return;
     if (pageScroll) {
       if (e.deltaY > 0 && window.scrollY < refInfomationPage.current.offsetTop) {
@@ -35,6 +36,7 @@ function App() {
         
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
+          setscrollState('Skill');
 
           if (refInfomationPage.current.style.overflowY) return;
 
@@ -50,16 +52,48 @@ function App() {
 
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
+          setscrollState('Home');
           refInfomationPage.current.scrollTop = 0;
         }, 600);
       }
     }
   }
 
+  useEffect(() => {
+    const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
+    if (window.scrollY !== refInfomationPage.current.offsetTop) return;
+
+    if (plus >= refInfomationPage.current.childNodes[0].offsetTop && plus < refInfomationPage.current.childNodes[1].offsetTop) {
+      return setscrollState('Skill');
+    }
+    if (plus >= refInfomationPage.current.childNodes[1].offsetTop && plus < refInfomationPage.current.childNodes[2].offsetTop) {
+      return setscrollState('Strength');
+    }
+    if (plus >= refInfomationPage.current.childNodes[2].offsetTop) {
+      return setscrollState('Project');
+    }
+  }, [])
+
+
+  const onScrollSpi = () => {
+    const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
+    if (window.scrollY !== refInfomationPage.current.offsetTop) return;
+
+    if (plus >= refInfomationPage.current.childNodes[0].offsetTop && plus < refInfomationPage.current.childNodes[1].offsetTop) {
+      return setscrollState('Skill');
+    }
+    if (plus >= refInfomationPage.current.childNodes[1].offsetTop && plus < refInfomationPage.current.childNodes[2].offsetTop) {
+      return setscrollState('Strength');
+    }
+    if (plus >= refInfomationPage.current.childNodes[2].offsetTop) {
+      return setscrollState('Project');
+    }
+  }
+
   return (
     <>
-      <Header refMainPage={refMainPage} refInfomationPage={refInfomationPage} />
-      <Main refMainPage={refMainPage} refInfomationPage={refInfomationPage} onWheelScroll={onWheelScroll} />
+      <Header refMainPage={refMainPage} refInfomationPage={refInfomationPage} scrollState={scrollState} setscrollState={setscrollState} />
+      <Main refMainPage={refMainPage} refInfomationPage={refInfomationPage} onWheelScroll={onWheelScroll} onScrollSpi={onScrollSpi} />
     </>
   );
 }

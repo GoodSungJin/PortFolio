@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 
-const Header = ({ refMainPage, refInfomationPage }) => {
+const Header = ({ refMainPage, refInfomationPage, scrollState, setscrollState }) => {
   const [navState, setnavState] = useState(['Home', 'Skill', 'Strength', 'Project']);
 
   const scrollHome = (e) => {
     e.preventDefault();
     refInfomationPage.current.scrollTop = 0;
     refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+    setTimeout(() => {
+      setscrollState('Home');
+      
+    }, 600);
   };
-  // b.scrollIntoView({ behavior: 'smooth' })
+
   const moveElem = (item) => {
     if (item === 'Home') {
       refInfomationPage.current.scrollTop = 0;
       refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+      setTimeout(() => {
+        setscrollState('Home');
+        
+      }, 600);
       return;
     }
     if (item === 'Skill') {
@@ -21,17 +29,15 @@ const Header = ({ refMainPage, refInfomationPage }) => {
       return;
     }
     if (item === 'Strength') {
-      // console.log(refMainPage.current.childNodes)
       refInfomationPage.current.childNodes[1].scrollIntoView({ block: "start", behavior: 'smooth' });
       return;
     }
     if (item === 'Project') {
-      // console.log(refMainPage.current.childNodes)
       refInfomationPage.current.childNodes[2].scrollIntoView({ block: "end", behavior: 'smooth' });
       return;
     }
-
   };
+
 
   return (
     <SectionHeader>
@@ -43,7 +49,7 @@ const Header = ({ refMainPage, refInfomationPage }) => {
           <ul>
             {navState.map((item, idx) => {
               return (
-                <li onClick={() => moveElem(item)}>{item}</li>
+                <li className={scrollState === item ? 'active' : null} onClick={() => moveElem(item)}>{item}</li>
               )
             })}
           </ul>
