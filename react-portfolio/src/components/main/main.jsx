@@ -7,7 +7,7 @@ import InfomationPage from './infomation-page/infomation-page.jsx';
 
 
 
-const Main = ({ refMainPage, refInfomationPage, onWheelScroll, onScrollSpi }) => {
+const Main = ({ refMainPage, refInfomationPage, onWheelScroll, onScrollSpy }) => {
   useEffect(() => {
     if (window.scrollY >= refInfomationPage.current.offsetTop) {
       refInfomationPage.current.style.overflowY = "scroll";
@@ -17,7 +17,7 @@ const Main = ({ refMainPage, refInfomationPage, onWheelScroll, onScrollSpi }) =>
 
 
   return (
-    <MainTag onWheel={onWheelScroll} ref={refMainPage} onScroll={onScrollSpi}>
+    <MainTag onWheel={onWheelScroll} ref={refMainPage} onScroll={onScrollSpy}>
       <MainPage />
       <InfomationPage refInfo={refInfomationPage}/>
     </MainTag>

@@ -75,7 +75,7 @@ function App() {
   }, [])
 
 
-  const onScrollSpi = () => {
+  const onScrollSpy = () => {
     const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
     if (window.scrollY !== refInfomationPage.current.offsetTop) return;
 
@@ -93,7 +93,7 @@ function App() {
   return (
     <>
       <Header refMainPage={refMainPage} refInfomationPage={refInfomationPage} scrollState={scrollState} setscrollState={setscrollState} />
-      <Main refMainPage={refMainPage} refInfomationPage={refInfomationPage} onWheelScroll={onWheelScroll} onScrollSpi={onScrollSpi} />
+      <Main refMainPage={refMainPage} refInfomationPage={refInfomationPage} onWheelScroll={onWheelScroll} onScrollSpy={onScrollSpy} />
     </>
   );
 }

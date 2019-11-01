@@ -96,6 +96,20 @@ const ProjectPage = () => {
               value: 'Sytled Component의 props를 이용하여 상태 값을 style 에 바인딩에 사용했습니다.',
             }
           ]
+        },
+        {
+          img : loginImg,
+          name: '헤더',
+          ddList: [
+            {
+              subName: 'Spy Scroll',
+              value: '스크롤의 해당 영역에 맞게 Nav Bar에 표시 해줍니다.',
+            },
+            {
+              subName: 'Click Scroll',
+              value: 'Nav Bar 클릭 시 해당 영역으로 Scroll되게 구현했습니다.',
+            }
+          ]
         }
       ]
     },
