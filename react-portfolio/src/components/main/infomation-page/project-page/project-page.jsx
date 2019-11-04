@@ -222,27 +222,25 @@ const ProjectPage = () => {
                         <div>
                           <h5>맡은 역할</h5>
                           <ul>
-                            {
-                              item.inner.map(item => {
-                                return (
-                                  <Li innerImg={item.img}>
-                                    <span>{item.name}</span>
-                                    <dl>
-                                      {
-                                        item.ddList.map(item => {
-                                          return (
-                                            <>
-                                            <dt>{item.subName}</dt>
-                                            <dd>{item.value}</dd>
-                                            </>
-                                          )
-                                        })
-                                      }
-                                    </dl>
-                                  </Li>
-                                )
-                              })
-                            }
+                            {item.inner.map(item => {
+                              return (
+                                <Li innerImg={item.img}>
+                                  <span>{item.name}</span>
+                                  <dl>
+                                    {
+                                      item.ddList.map(item => {
+                                        return (
+                                          <>
+                                          <dt>{item.subName}</dt>
+                                          <dd>{item.value}</dd>
+                                          </>
+                                        )
+                                      })
+                                    }
+                                  </dl>
+                                </Li>
+                              )
+                            })}
                           </ul>
                         </div>
                       </ModalBody>

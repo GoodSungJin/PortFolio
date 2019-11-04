@@ -13,7 +13,7 @@ const SkillPage = () => {
   const skillState = [
     {
       name: "HTML",
-      value: "HTML5의 새로운 태그를 활용할 수 있고, Symentic Markup을 이해하여 웹 접근성을 고려한 개발을 지향합니다.",
+      value: "HTML5의 새로운 태그를 활용할 수 있고, Semantic Markup을 이해하여 웹 접근성을 고려한 개발을 지향합니다.",
       proficiency: 65,
       img: logoHtml,
       color: '#F1652A'
