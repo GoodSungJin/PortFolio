@@ -49,7 +49,7 @@ const Header = ({ refMainPage, refInfomationPage, scrollState, setscrollState })
           <ul>
             {navState.map((item, idx) => {
               return (
-                <li className={scrollState === item ? 'active' : null} onClick={() => moveElem(item)}>{item}</li>
+                <li onClick={() => moveElem(item)}><span className={scrollState === item ? 'active' : null}>{item}</span></li>
               )
             })}
           </ul>

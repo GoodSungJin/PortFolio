@@ -64,7 +64,7 @@ export const Nav = styled.nav`
     }
 
     .active {
-      color: red;
+      color: palevioletred;
     }
   }
 `;
