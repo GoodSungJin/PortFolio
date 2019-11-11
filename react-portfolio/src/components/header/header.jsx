@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 
-const Header = ({ refMainPage, refInfomationPage, scrollState, setscrollState }) => {
-  const [navState, setnavState] = useState(['Home', 'Skill', 'Strength', 'Project']);
+const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscrollState }) => {
+  const [navState, setnavState] = useState(['Home', 'About me', 'Project', 'Contact']);
 
   const scrollHome = (e) => {
     e.preventDefault();
     refInfomationPage.current.scrollTop = 0;
     refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+    refHeader.current.style.color = '#fff';
+    refHeader.current.style.backgroundColor = null;
+    refHeader.current.style.boxShadow = null;
     setTimeout(() => {
       setscrollState('Home');
-      
     }, 600);
   };
 
@@ -18,29 +20,43 @@ const Header = ({ refMainPage, refInfomationPage, scrollState, setscrollState })
     if (item === 'Home') {
       refInfomationPage.current.scrollTop = 0;
       refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+      refHeader.current.style.color = '#fff';
+      refHeader.current.style.backgroundColor = null;
+      refHeader.current.style.boxShadow = null;
       setTimeout(() => {
         setscrollState('Home');
-        
       }, 600);
       return;
     }
-    if (item === 'Skill') {
+    if (item === 'About me') {
       refInfomationPage.current.childNodes[0].scrollIntoView({ block: "start", behavior: 'smooth' });
-      return;
-    }
-    if (item === 'Strength') {
-      refInfomationPage.current.childNodes[1].scrollIntoView({ block: "start", behavior: 'smooth' });
+      setscrollState('About me');
+      refHeader.current.style.color = '#1c1c1c';
+      refHeader.current.style.backgroundColor = '#fff';
+      refHeader.current.style.boxShadow = '0 1px 5px 0 rgba(0, 0, 0, 0.03)';
       return;
     }
     if (item === 'Project') {
+      setscrollState('Project');
       refInfomationPage.current.childNodes[2].scrollIntoView({ block: "end", behavior: 'smooth' });
+      refHeader.current.style.color = '#1c1c1c';
+      refHeader.current.style.backgroundColor = '#fff';
+      refHeader.current.style.boxShadow = '0 1px 5px 0 rgba(0, 0, 0, 0.03)';
+      return;
+    }
+    if (item === 'Contact') {
+      setscrollState('Contact');
+      refInfomationPage.current.childNodes[3].scrollIntoView({ block: "end", behavior: 'smooth' });
+      refHeader.current.style.color = '#1c1c1c';
+      refHeader.current.style.backgroundColor = '#fff';
+      refHeader.current.style.boxShadow = '0 1px 5px 0 rgba(0, 0, 0, 0.03)';
       return;
     }
   };
 
 
   return (
-    <SectionHeader>
+    <SectionHeader ref={refHeader}>
       <DivContain>
         <H1HOME onClick={scrollHome}>
           <a href="#" className="a11y-hidden">최성진 포트폴리오</a>

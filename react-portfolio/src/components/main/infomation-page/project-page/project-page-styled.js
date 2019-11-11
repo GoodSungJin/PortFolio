@@ -4,8 +4,19 @@ import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 
 export const SectionProject = styled.section`
   width: 100vw;
-  padding: 75px 0;
+  padding: 170px 0;
   text-align: center;
+
+  .modal {
+    overflow-x: hidden!important;
+    overflow-y: hidden!important;
+
+    .modal-content {
+      height: 900px;
+      padding: 29px;
+      overflow-y: scroll;
+    }
+  }
 `;
 
 export const DivContain = styled.div`
@@ -16,7 +27,7 @@ export const DivContain = styled.div`
   text-align: left;
 
   @media ${Tablet} {
-    display: flex;
+    /* display: flex; */
     margin: 0 auto;
   }
 
@@ -36,15 +47,25 @@ export const DivFlex = styled.div`
     
   }
 
-@media ${Tablet} {
-  width: 87%;
-  .modal-content {
-    
-    .modal-header {
-    }
+  @media ${Tablet} {
+    .modal-content {
+      
+      .modal-header {
+      }
 
+    }
   }
-}
+`;
+
+export const H3Project = styled.h3`
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: #575757;
+  margin: 0 auto;
+  width: 85px;
+  height: 37px;
+  margin-bottom: 50px;
+  
 `;
 
 export const Figure = styled.figure`
@@ -64,7 +85,7 @@ export const Figure = styled.figure`
   }
 
   @media ${Desktop} {
-    width: 19vw;
+    width: ${100 * 330 / 1920}vw;
   }
 `;
 
@@ -96,124 +117,102 @@ export const ModalTime = styled.span`
 
 
   @media ${Desktop} {
-    font-size: 1.5rem;
-    color: #7a7a7a;
-    line-height: 3rem;
     align-self: flex-end;
-    margin-left: 1vw;
+    opacity: 0.65;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color: #7a7a7a;
   }
 `;
 
 export const ModalHead = styled.div`
-  padding: 3rem;
+  flex-direction: column-reverse;
+  border-bottom: unset;
+  margin-bottom: 40px;
+
+  > div {
+    margin: 0 auto;
+    text-align: center;
+
+    h4 {
+      font-size: 2.5rem;
+      line-height: 3.7rem;
+      color: #575757;
+    }
+  }
 `;
 
 export const ModalBody = styled.div`
   > div {
-    display: flex;
-    padding: 3rem;
-    justify-content: space-between;
-
-  &:nth-child(1) {
-    background-color: #ece4db;
-
+    &:nth-child(1) {
+      padding: 25px 30px;
+      background-color: #ece4db;
+      margin-bottom: 30px;
+    }
   }
-  }
-
 
   h5 {
-    line-height: 2.5rem;
-    font-size: 2rem;
+    width: 82px;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
     color: #575757;
-    width: 95px;
   }
 
   p {
-    color: #222;
-    letter-spacing: 1px;
-    line-height: 2.5rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: #7a7a7a;
   }
 
   .intro {
-    display: flex;
-    width: 50%;
-
-    p {
-      width: ${100 * 434 / 1920}vw;
-    }
+    margin-bottom: 20px;
   }
 
   .sub-intro {
-    display: flex;
-    flex-wrap: wrap;
-    width: 45%;
-
-    p {
-      width: ${100 * 375 / 1920}vw;
-    }
-
     > div {
       display: flex;
-      width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
-  }
-
-  ul {
-    /* display: flex; */
-    width: 91%;
-    letter-spacing: 1px;
-    line-height: 2.5rem;
-    /* flex-wrap: wrap;
-    justify-content: space-between; */
   }
 `;
 
 export const Li = styled.li`
-  width: 48%;
-  padding: 15px;
-  margin-bottom: 45px;
-  /* border: 2px solid;
-  border-radius: 1%;
-  border-color: cornflowerblue; */
+  display: flex;
+  margin-bottom: 50px;
 
-  &:nth-child(even) {
-    float: right;
-
+  img {
+    width: 350px;
+    height: 238px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+    margin-right: 30px;
   }
 
-  &:nth-child(odd) {
-    float: left;
-  }
+  > div {
+    h6 {
+      font-size: 2rem;
+      line-height: 3rem;
+      color: #404040;
+      margin-bottom: 10px;
+    }
 
+    dl {
+      font-size: 16px;
+      line-height: 2.3rem;
+      color: #7a7a7a;
 
-  &:before {
-    content: '';
-    display: block;
-    background-image: url(${props => props.innerImg});
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    height: 200px;
-    margin-bottom: 15px;
-  }
+      dt {
+        &:before {
+          content: '∙ ';
+          display: inline-block;
+          margin-right: 5px;
 
+        }
+      }
 
-  span {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  dt {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-
-  }
-  dd {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    white-space: pre-line;
+      dd {
+        margin-bottom: 10px;
+      }
+    }
   }
 `;

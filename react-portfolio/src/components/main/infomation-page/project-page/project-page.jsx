@@ -1,6 +1,5 @@
 import React from 'react';
-import { H3Infomation } from '../../../../styles/css/shared-styled';
-import { SectionProject, DivContain, Figcaption, Figure, Img, SpanTime, DivFlex, ModalTime, ModalBody, ModalHead, Li } from './project-page-styled';
+import { H3Project, SectionProject, DivContain, Figcaption, Figure, Img, SpanTime, DivFlex, ModalTime, ModalBody, ModalHead, Li } from './project-page-styled';
 
 import portfolio from '../../../../styles/image/project/pofol-small.jpg'
 import megabox from '../../../../styles/image/project/megabox.jpg'
@@ -76,8 +75,8 @@ const ProjectPage = () => {
       date: '2019.10.15 ~ 2019.10.20',
       img: portfolio,
       intro: 'React 스터디를 진행하고 만든 첫 React 프로젝트로, Styled Component를 처음 사용해 본 반응형 프로젝트입니다. Hooks를 기반으로 useReducer, useEffect, useRef 를 사용한 간단한 개인 포트폴리오 사이트입니다.',
-      mySkill: 'React, Styled Component, HTML, CSS, JavsScript, Bootstrap, GitHub Pages',
-      team: '프론트엔드 1명',
+      mySkill: 'React, Styled Component, HTML, CSS, JavsScript, Bootstrap, GitHub Pages, Zeplin',
+      team: '프론트엔드 1명, 디자이너 1명',
       inner: [
         {
           img : loginImg,
@@ -85,7 +84,7 @@ const ProjectPage = () => {
           ddList: [
             {
               subName: 'OnePageScroll',
-              value: '첫 메인 페이지에서 scroll 할 경우 다음 페이지로 이동하게 구현했습니다. (메인 페지이지만 적용)',
+              value: '첫 메인 페이지에서 scroll 할 경우 다음 페이지로 이동하게 구현했습니다. (메인 페이지만 적용)',
             },
             {
               subName: 'Styled Component',
@@ -177,7 +176,7 @@ const ProjectPage = () => {
     <SectionProject>
       <h2 className="a11y-hidden">프로젝트 소개</h2>
       <DivContain>
-        <H3Infomation>Project</H3Infomation>
+        <H3Project>Project</H3Project>
         <DivFlex>
           {
             project.map((item, idx) => {
@@ -191,13 +190,16 @@ const ProjectPage = () => {
                     <SpanTime>{item.date}</SpanTime>
                   </Figcaption>
                 </Figure>
+
                 <div key={idx + item.name + 1} className={`modal fade ` + ('a' + idx)}
                 tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
                   <div className="modal-dialog modal-xl">
                     <div className="modal-content">
                       <ModalHead className="modal-header">
-                        <h4 className="modal-title h1" id="myExtraLargeModalLabel">메가박스 클론 프로젝트</h4>
-                        <ModalTime>2019.07.15 ~ 2019.08.08</ModalTime>
+                        <div>
+                          <h4 className="modal-title h1" id="myExtraLargeModalLabel">메가박스 클론 프로젝트</h4>
+                          <ModalTime>2019.07.15 ~ 2019.08.08</ModalTime>
+                        </div>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">×</span>
                         </button>
@@ -205,7 +207,6 @@ const ProjectPage = () => {
                       <ModalBody className="modal-body">
                         <div>
                           <div className="intro">
-                            <h5>소개</h5>
                             <p>{item.intro}</p>
                           </div>
                           <div className="sub-intro">
@@ -220,24 +221,24 @@ const ProjectPage = () => {
                           </div>
                         </div>
                         <div>
-                          <h5>맡은 역할</h5>
                           <ul>
                             {item.inner.map(item => {
                               return (
-                                <Li innerImg={item.img}>
-                                  <span>{item.name}</span>
-                                  <dl>
-                                    {
-                                      item.ddList.map(item => {
+                                <Li>
+                                  <img src={item.img} alt={item.name + '이미지'} />
+                                  <div>
+                                    <h6>{item.name}</h6>
+                                    <dl>
+                                      {item.ddList.map(item => {
                                         return (
                                           <>
                                           <dt>{item.subName}</dt>
                                           <dd>{item.value}</dd>
                                           </>
                                         )
-                                      })
-                                    }
-                                  </dl>
+                                      })}
+                                    </dl>
+                                  </div>
                                 </Li>
                               )
                             })}

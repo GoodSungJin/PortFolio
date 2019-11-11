@@ -4,12 +4,14 @@ import { Desktop, Tablet } from '../../styles/css/shared-styled';
 import img from '../../styles/image/logo.png'
 
 export const SectionHeader = styled.section`
-  z-index: 9999;
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
+  transition: .5s;
+
 `;
 
 export const DivContain = styled.div`
@@ -51,20 +53,25 @@ export const Nav = styled.nav`
 
     li {
       cursor: pointer;
-      
-      &:nth-child(n+2) {
-        margin-left: 20px;
 
-        &:before {
-          content: '|';
-          display: inline-block;
-          margin-right: 20px;
-        }
+      span {
+        opacity: 0.7;
+        height: 24px;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        font-weight: 700;
+
+      }
+      
+      
+      &:nth-child(-n+3) {
+        margin-right: 40px;
       }
     }
 
     .active {
-      color: palevioletred;
+      color: #19387e;
+      opacity: unset;
     }
   }
 `;

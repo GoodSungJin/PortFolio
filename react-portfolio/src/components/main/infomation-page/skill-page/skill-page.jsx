@@ -1,6 +1,6 @@
 import React from 'react';
 import { H3Infomation } from '../../../../styles/css/shared-styled';
-import { DivContain, SectionSkill, P, Dl, DivInDl, Dt } from './skill-page-styled';
+import { DotIcon, DivContain, SectionSkill, P, Dl, DivInDl, Dt } from './skill-page-styled';
 
 import logoHtml from '../../../../styles/image/skill-logo/html.svg'
 import logoCss from '../../../../styles/image/skill-logo/css.svg'
@@ -8,6 +8,8 @@ import logoJavaScript from '../../../../styles/image/skill-logo/javascript.svg'
 import logoAngular from '../../../../styles/image/skill-logo/angular.svg'
 import logoReact from '../../../../styles/image/skill-logo/react.svg'
 import logoTypeScript from '../../../../styles/image/skill-logo/typescript.svg'
+import logoGithub from '../../../../styles/image/skill-logo/github.svg'
+import logoStyled from '../../../../styles/image/skill-logo/styeld.png'
 
 const SkillPage = () => {
   const skillState = [
@@ -53,11 +55,26 @@ const SkillPage = () => {
       img: logoReact,
       color: '#53C1DE'
     },
+    {
+      name: "Styled Components",
+      value: "Styled Components의 props를 사용하여 style을 적용할 수 있고, css의 기능과 sass의 중첩문을 구현할 수 있습니다.",
+      proficiency: 65,
+      img: logoStyled,
+      color: '#D571AE'
+    },
+    {
+      name: "Git/Github",
+      value: "Organization을 이용해 프로젝트를 진행한 경험이 있고, git flow를 사용해 branch를 관리할 수 있습니다.",
+      proficiency: 75,
+      img: logoGithub,
+      color: '#000'
+    },
   ] 
 
   return (
     <SectionSkill>
       <h2 className="a11y-hidden">기술 소개</h2>
+      <DotIcon>도트</DotIcon>
       <P>안녕하세요, <strong>코딩을 즐기는 개발자</strong> 최성진입니다.</P>
       <DivContain>
         <H3Infomation>Skill</H3Infomation>

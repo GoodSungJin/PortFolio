@@ -6,6 +6,7 @@ export const SectionSkill = styled.section`
   width: 100vw;
   text-align: center;
   padding-bottom: 75px;
+  padding-top: 120px;
 `;
 
 export const DivContain = styled.div`
@@ -25,6 +26,14 @@ export const DivContain = styled.div`
     width: ${100 * 1410 / 1920}%;
   }
 `;
+
+export const DotIcon = styled.p`
+  width: 56px;
+  height: 56px;
+  border: solid 1px #707070;
+  margin: 0 auto;
+`;
+
 
 export const P = styled.p`
   font-size: 3rem;
@@ -50,6 +59,9 @@ export const P = styled.p`
   }
 
   @media ${Desktop} {
+    margin-top: 20px;
+    margin-bottom: 170px;
+
     strong {
       margin-left: 30px;
       margin-right: 30px;
