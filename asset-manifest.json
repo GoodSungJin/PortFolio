@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.9af0ad9f.chunk.css",
-    "main.js": "/PortFolio/static/js/main.610de6fe.chunk.js",
-    "main.js.map": "/PortFolio/static/js/main.610de6fe.chunk.js.map",
+    "main.js": "/PortFolio/static/js/main.18f78d32.chunk.js",
+    "main.js.map": "/PortFolio/static/js/main.18f78d32.chunk.js.map",
     "runtime-main.js": "/PortFolio/static/js/runtime-main.805a6867.js",
     "runtime-main.js.map": "/PortFolio/static/js/runtime-main.805a6867.js.map",
     "static/js/2.48d72f31.chunk.js": "/PortFolio/static/js/2.48d72f31.chunk.js",
     "static/js/2.48d72f31.chunk.js.map": "/PortFolio/static/js/2.48d72f31.chunk.js.map",
     "index.html": "/PortFolio/index.html",
-    "precache-manifest.82f734e15a0a833e4868216fe3069d49.js": "/PortFolio/precache-manifest.82f734e15a0a833e4868216fe3069d49.js",
+    "precache-manifest.0965f2123ae12db3219e07d9ae5cbfe7.js": "/PortFolio/precache-manifest.0965f2123ae12db3219e07d9ae5cbfe7.js",
     "service-worker.js": "/PortFolio/service-worker.js",
     "static/css/main.9af0ad9f.chunk.css.map": "/PortFolio/static/css/main.9af0ad9f.chunk.css.map",
     "static/media/index.css": "/PortFolio/static/media/NotoSans-Regular.49c56daa.otf",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.805a6867.js",
     "static/js/2.48d72f31.chunk.js",
     "static/css/main.9af0ad9f.chunk.css",
-    "static/js/main.610de6fe.chunk.js"
+    "static/js/main.18f78d32.chunk.js"
   ]
 }
