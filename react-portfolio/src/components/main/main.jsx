@@ -15,7 +15,6 @@ const Main = ({ refMainPage, refInfomationPage, onWheelScroll, onScrollSpy }) =>
     }
   }, [])
 
-
   return (
     <MainTag onWheel={onWheelScroll} ref={refMainPage} onScroll={onScrollSpy}>
       <MainPage />

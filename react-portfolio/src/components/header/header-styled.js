@@ -9,8 +9,12 @@ export const SectionHeader = styled.section`
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(255,255,255,0.8);
   transition: .5s;
+
+  @media ${Desktop} {
+    background-color: rgba(0, 0, 0, 0);
+  }
 
 `;
 
@@ -23,16 +27,15 @@ export const DivContain = styled.div`
 
   @media ${Tablet} {
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     width: 87%;
+    padding: 20px 0;
   }
 
   @media ${Desktop} {
     margin-top: unset;
     width: ${100 * 1410 / 1920}%;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
   }
 `;
 
@@ -46,8 +49,13 @@ export const H1HOME = styled.h1`
   height: 30px;
   cursor: pointer;
 
+  @media ${Tablet} {
+    width: 20vw;
+    margin: unset;
+    
+  }
+
   @media ${Desktop} {
-    width: 10vw;
   }
 `;
 

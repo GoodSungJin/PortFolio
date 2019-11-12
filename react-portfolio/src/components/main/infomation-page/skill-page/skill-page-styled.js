@@ -141,7 +141,8 @@ export const Dt = styled.dt`
   span {
     &:first-child {
       display: inline-block;
-      width: 135px;
+      width: 145px;
+      line-height: 2rem;
     }
 
     &:last-child {

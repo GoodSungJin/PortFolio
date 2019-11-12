@@ -11,7 +11,6 @@ export const SectionMain = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  text-align: center;
 
   @media ${Desktop} {
   }
@@ -21,13 +20,18 @@ export const DivContain = styled.div`
   position: relative;
   display: inline-block;
   margin-top: 13vh;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media ${Tablet} {
     margin-top: 18vh;
   }
 
   @media ${Desktop} {
+    left: unset;
+    transform: unset;
     height: 100%;
+    width: 100%;
     margin-top: unset;
   }
 `;
@@ -41,6 +45,8 @@ export const P = styled.p`
   letter-spacing: 0.3rem;
   line-height: 4rem;
   margin: 0 auto;
+
+  text-align: center;
 
 
 
@@ -84,7 +90,6 @@ export const P = styled.p`
 
     &:last-child{
       > span {
-        /* width: 0; */
         overflow: hidden;
         white-space: nowrap;
         display:inline-block;
@@ -99,24 +104,26 @@ export const P = styled.p`
 
 
   @media ${Tablet} {
-    text-align: center;
-    width: 100%;
+    width: 685px;
     white-space: nowrap;
     font-size: 4rem;
+    text-align: unset;
 
-    @keyframes typewriter{
-      0% {
-        width: 0;
-      }
-      
-      100% {
-        width: 100%;
-      }
+    @keyframes Ftypewriter{
+      0% {width: 0;}
+      100% {width: 295px}
     }
-        
-    span {
+
+    @keyframes Stypewriter{
+      0% {width: 0;}
+      100% {width: 335px}
+    }
+
+    > span {
       display: inline-block;
-      
+      b {
+        font-weight: 700;
+      }
 
       &:first-child {
         margin-right: 5vw;
@@ -125,39 +132,40 @@ export const P = styled.p`
   }
 
   @media ${Desktop} {
+    width: ${100 * 1300 / 1920}vw;
+    text-align: unset;
     font-size: 4.3rem;
     letter-spacing: 1.72rem;
-    /* min-width: 1200px;
-    width: 1200px; */
     margin-top: unset;
     line-height: 6rem;
 
-    display: flex;
-    /* justify-content: space-between; */
     position:absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -60%);
     white-space: nowrap;
 
-    @keyframes typewriter{
-    0% {
-      width: 0;
-    }
-    
-    50% {
-    }
-    
-    100% {
-      justify-content: space-between;
-      width: 1200px;
-    }
-  }
-
-    span {
+    > span {
       &:first-child {
-        margin-left: 3vw;
+        margin-left: 3.5vw;
+        float: left;
+        margin-right: unset;
       }
+
+      &:last-child {
+        width: 480px;
+        float: right;
+      }
+    }
+
+    @keyframes Ftypewriter{
+      0% {width: 0;}
+      100% {width: 430px}
+    }
+
+    @keyframes Stypewriter{
+      0% {width: 0;}
+      100% {width: 480px}
     }
   }
 `;

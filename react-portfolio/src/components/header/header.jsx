@@ -4,8 +4,19 @@ import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscrollState }) => {
   const [navState, setnavState] = useState(['Home', 'About me', 'Project', 'Contact']);
 
+
+  useEffect(() => {
+    if(window.innerWidth < 1200) return;
+    setscrollState('Home');
+  }, [])
+
   const scrollHome = (e) => {
     e.preventDefault();
+
+    if(window.innerWidth < 1200) {
+      refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+      return;
+    }
     refInfomationPage.current.scrollTop = 0;
     refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
     refHeader.current.style.color = '#fff';
@@ -18,6 +29,10 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
 
   const moveElem = (item) => {
     if (item === 'Home') {
+      if(window.innerWidth < 1200) {
+        refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
+        return;
+      }
       refInfomationPage.current.scrollTop = 0;
       refMainPage.current.scrollIntoView({ block: "start", behavior: 'smooth' });
       refHeader.current.style.color = '#fff';
@@ -29,6 +44,10 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
       return;
     }
     if (item === 'About me') {
+      if(window.innerWidth < 1200) {
+        refInfomationPage.current.childNodes[0].scrollIntoView({ block: "start", behavior: 'smooth' });
+        return;
+      }
       refInfomationPage.current.childNodes[0].scrollIntoView({ block: "start", behavior: 'smooth' });
       setscrollState('About me');
       refHeader.current.style.color = '#1c1c1c';
@@ -37,6 +56,10 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
       return;
     }
     if (item === 'Project') {
+      if(window.innerWidth < 1200) {
+        refInfomationPage.current.childNodes[2].scrollIntoView({ block: "start", behavior: 'smooth' });
+        return;
+      }
       setscrollState('Project');
       refInfomationPage.current.childNodes[2].scrollIntoView({ block: "end", behavior: 'smooth' });
       refHeader.current.style.color = '#1c1c1c';
@@ -45,6 +68,10 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
       return;
     }
     if (item === 'Contact') {
+      if(window.innerWidth < 1200) {
+        refInfomationPage.current.childNodes[3].scrollIntoView({ block: "start", behavior: 'smooth' });
+        return;
+      }
       setscrollState('Contact');
       refInfomationPage.current.childNodes[3].scrollIntoView({ block: "end", behavior: 'smooth' });
       refHeader.current.style.color = '#1c1c1c';

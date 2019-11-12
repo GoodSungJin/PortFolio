@@ -23,12 +23,12 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { pageScroll } = state;
-  const [scrollState, setscrollState] = useState('Home');
+  const [scrollState, setscrollState] = useState();
   const refInfomationPage = useRef();
   const refMainPage = useRef();
   const refHeader = useRef();
   
-  const onWheelScroll = (e) => {    
+  const onWheelScroll = (e) => {
     if (refInfomationPage.current.scrollTop !== 0) return;
     if (pageScroll) {
       if (e.deltaY > 0 && window.scrollY < refInfomationPage.current.offsetTop) {
@@ -68,10 +68,10 @@ function App() {
   }
 
   useEffect(() => {
-    // refHeader.current.children[0].children[1].style.color = 'red';
-    console.log(window.scrollY)
     const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
     if (window.scrollY !== refInfomationPage.current.offsetTop) return;
+    if(window.innerWidth < 1200) return;
+
 
     if (plus >= refInfomationPage.current.childNodes[0].offsetTop && plus < refInfomationPage.current.childNodes[2].offsetTop) {
       refHeader.current.style.color = '#1c1c1c';
