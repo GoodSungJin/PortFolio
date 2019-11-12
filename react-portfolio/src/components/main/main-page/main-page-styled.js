@@ -20,7 +20,7 @@ export const SectionMain = styled.section`
 export const DivContain = styled.div`
   position: relative;
   display: inline-block;
-  margin-top: 10vh;
+  margin-top: 13vh;
 
   @media ${Tablet} {
     margin-top: 18vh;
@@ -33,55 +33,76 @@ export const DivContain = styled.div`
 `;
 
 export const P = styled.p`
-  font-size: 4rem;
+  font-size: 3rem;
   color: #ffffff;
   text-shadow: 0 0 10px #000000;
 
   width: 331px;
   letter-spacing: 0.3rem;
-  line-height: 5rem;
+  line-height: 4rem;
   margin: 0 auto;
 
 
-  position: relative;
-  border-right: 2px solid rgba(255,255,255,.75);
-  overflow: hidden;
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-            blinkTextCursor 500ms steps(44) infinite normal;
 
-
-  @keyframes typewriter{
-    0% {
-      width: 0;
-    }
-    
-    50% {
-    }
-    
-    100% {
-      width: 100%;
-    }
+  @keyframes Ftypewriter{
+    0% {width: 0;}
+    100% {width: 230px}
   }
+
+  @keyframes Stypewriter{
+    0% {width: 0;}
+    100% {width: 255px}
+  }
+
   @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+    0%{
+      border-right: 2px solid rgba(255,255,255,.75);
+      }
+    100%{
+      border-right: 2px solid transparent;
+    }
   }
 
-
-
-
-  span {
-    display: block;
-
+  > span {
     b {
       font-weight: 700;
     }
+
+    display: block;
+    &:first-child {
+      > span {
+        overflow: hidden;
+        white-space: nowrap;
+        display:inline-block;
+        position: relative;
+        
+        overflow: hidden;
+        animation: Ftypewriter 2s steps(22) 1s 1 normal both,
+                  blinkTextCursor 500ms steps(44) 6 normal both;
+      }
+    }
+
+    &:last-child{
+      > span {
+        /* width: 0; */
+        overflow: hidden;
+        white-space: nowrap;
+        display:inline-block;
+        position: relative;
+        overflow: hidden;
+        animation: Stypewriter 2s steps(22) 3s 1 normal both,
+                  blinkTextCursor 650ms steps(44) 3s infinite forwards;
+      }
+    }
+
   }
+
 
   @media ${Tablet} {
     text-align: center;
     width: 100%;
     white-space: nowrap;
+    font-size: 4rem;
 
     @keyframes typewriter{
       0% {

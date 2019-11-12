@@ -7,8 +7,12 @@ const MainPage = () => {
       <h2 className="a11y-hidden">메인 페이지</h2>
       <DivContain>
         <P>
-          <span><b>상상을</b> 구현하는</span> 
-          <span>프론트엔드 <b>개발자</b></span>
+          <span>
+            <span><b>상상을</b> 구현하는</span> 
+          </span>
+          <span>
+            <span>프론트엔드 <b>개발자</b></span>
+          </span>
         </P>
       </DivContain>
     </SectionMain>

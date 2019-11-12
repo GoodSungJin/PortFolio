@@ -154,7 +154,7 @@ export const Dt = styled.dt`
         content: '';
         display: inline-block;
         width: 45%;
-        margin-right: 5%;
+        margin-right: 3%;
         height: 6px;
         border-radius: 50px;
         background: linear-gradient( to right, ${props => props.color} ${props => props.proficiency}%, #e8e8e8 ${props => props.proficiency}%);
@@ -181,12 +181,12 @@ export const Dt = styled.dt`
     span {
       &:first-child {
         font-size: 2.8rem;
-        width: ${100 * 185 / 1920}vw;
+        width: ${100 * 260 / 1920}vw;
       }
 
       &:last-child {
         &:before {
-          width: ${100 * 231 / 1920}vw;
+          width: ${100 * 180 / 1920}vw;
         }
       }
     }

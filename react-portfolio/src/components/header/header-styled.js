@@ -18,7 +18,7 @@ export const DivContain = styled.div`
   position: relative;
   display: inline-block;
   height: 100%;
-  width: 85%;
+  width: 100%;
   /* text-align: left; */
 
   @media ${Tablet} {
@@ -40,14 +40,21 @@ export const H1HOME = styled.h1`
   background-image: url(${img});
   background-repeat: no-repeat;
   background-size: contain;
-  width: 10vw;
+  margin: 10px auto 0 auto;
+
+  width: 35vw;
   height: 30px;
   cursor: pointer;
+
+  @media ${Desktop} {
+    width: 10vw;
+  }
 `;
 
 export const Nav = styled.nav`
   ul {
     display: flex;
+    justify-content: center;
     line-height: 3rem;
     font-size: 2rem;
 
@@ -57,7 +64,7 @@ export const Nav = styled.nav`
       span {
         opacity: 0.7;
         height: 24px;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         line-height: 3rem;
         font-weight: 700;
 
@@ -72,6 +79,18 @@ export const Nav = styled.nav`
     .active {
       color: #19387e;
       opacity: unset;
+    }
+
+  }
+
+  @media ${Desktop} {
+    ul {
+      justify-content: unset;
+      li {
+        span {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 `;
