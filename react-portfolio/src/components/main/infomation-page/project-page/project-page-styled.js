@@ -78,6 +78,12 @@ export const Figure = styled.figure`
   &:hover {
     border: solid 1px #e9e9e9;
     box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.1);
+    background-color: unset;
+      
+    img {
+      transition: transform .35s;
+      transform:scale(1.1);
+    }
   }
 
   @media ${Tablet} {
