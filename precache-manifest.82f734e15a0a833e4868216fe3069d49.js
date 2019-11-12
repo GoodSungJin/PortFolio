@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a312ad4938536f57398c0c03d956646c",
+    "revision": "9e937f91f448702544fa787fd5b81094",
     "url": "/PortFolio/index.html"
   },
   {
-    "revision": "c58c498288e553a86c7c",
+    "revision": "9068be70f17a6ec4dd93",
     "url": "/PortFolio/static/css/main.9af0ad9f.chunk.css"
   },
   {
-    "revision": "84c1baf49a5019969306",
-    "url": "/PortFolio/static/js/2.a5830d92.chunk.js"
+    "revision": "b2e7af69a34ebdf9080d",
+    "url": "/PortFolio/static/js/2.48d72f31.chunk.js"
   },
   {
-    "revision": "c58c498288e553a86c7c",
-    "url": "/PortFolio/static/js/main.254a1ec4.chunk.js"
+    "revision": "9068be70f17a6ec4dd93",
+    "url": "/PortFolio/static/js/main.610de6fe.chunk.js"
   },
   {
     "revision": "c501042fb4ff7d612a1f",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "65b1d9e7d57565495bcf848a40ac4645",
     "url": "/PortFolio/static/media/fast-me.65b1d9e7.jpg"
+  },
+  {
+    "revision": "0ff1a6f08182be4aa63a0b54da1b9e57",
+    "url": "/PortFolio/static/media/github.0ff1a6f0.svg"
   },
   {
     "revision": "f0361c5e9bebc1c5647523db385641cf",
@@ -70,6 +74,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4009eef3b3e291f296e71962c70895c5",
     "url": "/PortFolio/static/media/react.4009eef3.svg"
+  },
+  {
+    "revision": "2826cb3c55ad947bd1a2d1962c50b376",
+    "url": "/PortFolio/static/media/styeld.2826cb3c.png"
   },
   {
     "revision": "3de182d2120823fe49c27eeb1765c53a",
