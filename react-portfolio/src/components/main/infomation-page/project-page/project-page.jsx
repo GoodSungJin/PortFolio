@@ -38,7 +38,8 @@ const ProjectPage = () => {
           ddList: [
             {
               subName: '캘린더',
-              value: '캘린더 로직을 직접 구현하고, 백엔드에서 받아온 예매 가능한 상영 날짜를 받아와 예매 가능한 날을 보여주었습니다. 캘린더와 예매 메인 페이지 캐러셀과의 상태 공유 및 연동이 필요 했기에 라이브러리를 사용하는 것보다 직접 만드는 것이 시간적으로 효율적이라 판단 돼 직접 구현했습니다.\n(발표자료 - https://hoy.kr/gqaxo)',
+              value: '캘린더 로직을 직접 구현하고, 백엔드에서 받아온 예매 가능한 상영 날짜를 받아와 예매 가능한 날을 보여주었습니다. 캘린더와 예매 메인 페이지 캐러셀과의 상태 공유 및 연동이 필요 했기에 라이브러리를 사용하는 것보다 직접 만드는 것이 시간적으로 효율적이라 판단 돼 직접 구현했습니다. ',
+              link: 'https://hoy.kr/gqaxo'
             },
             {
               subName: '예매 메인 페이지',
@@ -178,80 +179,80 @@ const ProjectPage = () => {
       <DivContain>
         <H3Project>Project</H3Project>
         <DivFlex>
-          {
-            project.map((item, idx) => {
-              return (
-              <>
-                <Figure key={idx + item.name} className="btn btn-light" data-toggle="modal" 
-                data-target={'.a' + idx}>
-                  <Img img={item.img} />
-                  <Figcaption>
-                    {item.name}
-                    <SpanTime>{item.date}</SpanTime>
-                  </Figcaption>
-                </Figure>
+          {project.map((item, idx) => {
+            return (
+            <>
+              <Figure key={idx + item.name} className="btn btn-light" data-toggle="modal" 
+              data-target={'.a' + idx}>
+                <Img img={item.img} />
+                <Figcaption>
+                  {item.name}
+                  <SpanTime>{item.date}</SpanTime>
+                </Figcaption>
+              </Figure>
 
-                <div key={idx + item.name + 1} className={`modal fade ` + ('a' + idx)}
-                tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                  <div className="modal-dialog modal-xl">
-                    <div className="modal-content">
-                      <ModalHead className="modal-header">
-                        <div>
-                          <h4 className="modal-title h1" id="myExtraLargeModalLabel">메가박스 클론 프로젝트</h4>
-                          <ModalTime>2019.07.15 ~ 2019.08.08</ModalTime>
+              <div key={idx + item.name + 1} className={`modal fade ` + ('a' + idx)}
+              tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-xl">
+                  <div className="modal-content">
+                    <ModalHead className="modal-header">
+                      <div>
+                        <h4 className="modal-title h1" id="myExtraLargeModalLabel">메가박스 클론 프로젝트</h4>
+                        <ModalTime>2019.07.15 ~ 2019.08.08</ModalTime>
+                      </div>
+                      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </ModalHead>
+                    <ModalBody className="modal-body">
+                      <div>
+                        <div className="intro">
+                          <p>{item.intro}</p>
                         </div>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                        </button>
-                      </ModalHead>
-                      <ModalBody className="modal-body">
-                        <div>
-                          <div className="intro">
-                            <p>{item.intro}</p>
+                        <div className="sub-intro">
+                          <div>
+                            <h5>참여 인원</h5>
+                            <p>{item.team}</p>
                           </div>
-                          <div className="sub-intro">
-                            <div>
-                              <h5>참여 인원</h5>
-                              <p>{item.team}</p>
-                            </div>
-                            <div>
-                              <h5>사용 기술</h5>
-                              <p>{item.mySkill}</p>
-                            </div>
+                          <div>
+                            <h5>사용 기술</h5>
+                            <p>{item.mySkill}</p>
                           </div>
                         </div>
-                        <div>
-                          <ul>
-                            {item.inner.map(item => {
-                              return (
-                                <Li>
-                                  <img src={item.img} alt={item.name + '이미지'} />
-                                  <div>
-                                    <h6>{item.name}</h6>
-                                    <dl>
-                                      {item.ddList.map(item => {
-                                        return (
-                                          <>
-                                          <dt>{item.subName}</dt>
-                                          <dd>{item.value}</dd>
-                                          </>
-                                        )
-                                      })}
-                                    </dl>
-                                  </div>
-                                </Li>
-                              )
-                            })}
-                          </ul>
-                        </div>
-                      </ModalBody>
-                    </div>
+                      </div>
+                      <div>
+                        <ul>
+                          {item.inner.map((item, idx) => {
+                            return (
+                              <Li key={item.name + idx}>
+                                <img src={item.img} alt={item.name + '이미지'} />
+                                <div>
+                                  <h6>{item.name}</h6>
+                                  <dl>
+                                    {item.ddList.map((item, idx) => {
+                                      return (
+                                        <>
+                                        <dt key={item.subName + idx}>{item.subName}</dt>
+                                        <dd key={item.subName + idx + 1}>{item.value}
+                                          { item.link ? <a href={item.link}> 발표자료</a> : null }
+                                        </dd>
+                                        </>
+                                      )
+                                    })}
+                                  </dl>
+                                </div>
+                              </Li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    </ModalBody>
                   </div>
                 </div>
-              </>
-              )
-            })
-          }
+              </div>
+            </>
+            )
+          })}
         </DivFlex>
       </DivContain>
     </SectionProject>

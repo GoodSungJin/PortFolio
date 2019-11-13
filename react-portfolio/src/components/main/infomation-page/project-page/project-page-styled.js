@@ -4,19 +4,25 @@ import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 
 export const SectionProject = styled.section`
   width: 100vw;
-  padding: 170px 0;
   text-align: center;
+  padding: 5px;
+  
+  
+  @media ${Tablet} {
+    padding: 170px 0;
 
-  .modal {
-    overflow-x: hidden!important;
-    overflow-y: hidden!important;
-
-    .modal-content {
-      height: 900px;
-      padding: 29px;
-      overflow-y: scroll;
+    .modal {
+      overflow-x: hidden!important;
+      overflow-y: hidden!important;
+  
+      .modal-content {
+        height: 900px;
+        padding: 29px;
+        overflow-y: scroll;
+      }
     }
   }
+
 `;
 
 export const DivContain = styled.div`
@@ -42,19 +48,6 @@ export const DivFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  .modal-content {
-    
-  }
-
-  @media ${Tablet} {
-    .modal-content {
-      
-      .modal-header {
-      }
-
-    }
-  }
 `;
 
 export const H3Project = styled.h3`
@@ -65,7 +58,6 @@ export const H3Project = styled.h3`
   width: 85px;
   height: 37px;
   margin-bottom: 50px;
-  
 `;
 
 export const Figure = styled.figure`
@@ -79,10 +71,11 @@ export const Figure = styled.figure`
     border: solid 1px #e9e9e9;
     box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.1);
     background-color: unset;
+    transition: transform .35s;
       
     img {
-      transition: transform .35s;
       transform:scale(1.1);
+      transition: transform .35s;
     }
   }
 
@@ -95,11 +88,15 @@ export const Figure = styled.figure`
   }
 `;
 
-export const Img = styled.img.attrs({
-  src: props => props.img
-})`
+export const Img = styled.img.attrs(props => ({
+  src: props.img
+}))`
   width: 100%;
-  height: 200px;
+  height: 150px;
+
+  @media ${Tablet} {
+    height: 200px;
+  }
 `;
 
 export const Figcaption = styled.figcaption`
@@ -113,16 +110,14 @@ export const Figcaption = styled.figcaption`
 
 export const SpanTime = styled.span`
   display: block;
-  /* font-size: 1.6rem; */
   font-size: 1.1rem;
-  /* line-height: 3rem; */
   color: #7a7a7a;
 `;
 
 export const ModalTime = styled.span`
 
 
-  @media ${Desktop} {
+  @media ${Tablet} {
     align-self: flex-end;
     opacity: 0.65;
     font-size: 1.6rem;
@@ -134,7 +129,7 @@ export const ModalTime = styled.span`
 export const ModalHead = styled.div`
   flex-direction: column-reverse;
   border-bottom: unset;
-  margin-bottom: 40px;
+  
 
   > div {
     margin: 0 auto;
@@ -146,12 +141,16 @@ export const ModalHead = styled.div`
       color: #575757;
     }
   }
+
+  @media ${Tablet} {
+    margin-bottom: 40px;
+  }
 `;
 
 export const ModalBody = styled.div`
   > div {
     &:nth-child(1) {
-      padding: 25px 30px;
+      padding: 10px 15px;
       background-color: #ece4db;
       margin-bottom: 30px;
     }
@@ -162,10 +161,11 @@ export const ModalBody = styled.div`
     font-size: 1.6rem;
     line-height: 2.3rem;
     color: #575757;
+    flex-shrink: 0;
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 2.6rem;
     color: #7a7a7a;
   }
@@ -180,18 +180,34 @@ export const ModalBody = styled.div`
       margin-bottom: 20px;
     }
   }
+
+  @media ${Tablet} {
+    > div {
+      &:nth-child(1) {
+        padding: 25px 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      color: #7a7a7a;
+    }
+    
+  }
 `;
 
 export const Li = styled.li`
-  display: flex;
   margin-bottom: 50px;
 
   img {
-    width: 350px;
-    height: 238px;
+    height: 150px;
+    margin: 0 auto 20px auto;
+    display: block;
+    width: 80%;
     border: solid 1px #707070;
     background-color: #ffffff;
-    margin-right: 30px;
   }
 
   > div {
@@ -203,11 +219,11 @@ export const Li = styled.li`
     }
 
     dl {
-      font-size: 16px;
+      font-size: 1.4rem;
       line-height: 2.3rem;
-      color: #7a7a7a;
 
       dt {
+        color: #505050;
         &:before {
           content: '∙ ';
           display: inline-block;
@@ -218,7 +234,35 @@ export const Li = styled.li`
 
       dd {
         margin-bottom: 10px;
+        color: #7a7a7a;
+        white-space: pre-line;
       }
+    }
+  }
+
+  @media ${Tablet} {
+    display: flex;
+
+    img {
+      height: 238px;
+      width: 100%;
+      margin: unset;
+      display: unset;
+    }
+
+    > div {
+      h6 {
+        font-size: 2rem;
+      }
+
+      dl {
+        font-size: 1.6rem;
+      }
+    }
+
+    img {
+      width: 350px;
+      margin-right: 30px;
     }
   }
 `;

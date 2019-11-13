@@ -8,7 +8,7 @@ export const Tablet = '(min-width: 768px)';
 
 
 export const H3Infomation = styled.h3`
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #575757;
   width: 105px;
   line-height: 4rem;

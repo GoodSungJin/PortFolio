@@ -1,4 +1,4 @@
-import React, { useReducer, useRef, useState, useEffect } from 'react';
+import React, { useReducer, useRef, useState, useEffect, useCallback } from 'react';
 import './App.css';
 
 import Main from './components/main/main';
@@ -42,10 +42,9 @@ function App() {
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
           setscrollState('About me');
-          
 
           if (refInfomationPage.current.style.overflowY) return;
-
+          
           refInfomationPage.current.style.overflowY = "scroll";
           refInfomationPage.current.style.overflowX = "hidden";
         }, 600);
@@ -60,12 +59,13 @@ function App() {
 
         setTimeout(() => {
           dispatch({ type: 'SET_PAGESCROLL', pageScroll: true });
+
           setscrollState('Home');
           refInfomationPage.current.scrollTop = 0;
         }, 600);
       }
     }
-  }
+  };
 
   useEffect(() => {
     const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
@@ -101,7 +101,7 @@ function App() {
     if (plus >= refInfomationPage.current.childNodes[3].offsetTop) {
       return setscrollState('Contact');
     }
-  }
+  };
 
   return (
     <>

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 
 const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscrollState }) => {
-  const [navState, setnavState] = useState(['Home', 'About me', 'Project', 'Contact']);
+  const navState = ['Home', 'About me', 'Project', 'Contact'];
 
 
   useEffect(() => {
@@ -92,7 +92,7 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
           <ul>
             {navState.map((item, idx) => {
               return (
-                <li onClick={() => moveElem(item)}><span className={scrollState === item ? 'active' : null}>{item}</span></li>
+                <li key={item + idx} onClick={() => moveElem(item)}><span className={scrollState === item ? 'active' : null}>{item}</span></li>
               )
             })}
           </ul>

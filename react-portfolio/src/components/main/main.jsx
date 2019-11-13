@@ -1,4 +1,4 @@
-import React, { useReducer, useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { MainTag } from './main-styled';
 
 import MainPage from './main-page/main-page.jsx';
