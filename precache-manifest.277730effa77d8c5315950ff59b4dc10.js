@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5aa55515b54838994392f1bb189ed945",
+    "revision": "a1ddaf96ef7c0cb6edd980abc9069d49",
     "url": "/PortFolio/index.html"
   },
   {
-    "revision": "51ab2c1c01c072a65c89",
-    "url": "/PortFolio/static/css/main.9af0ad9f.chunk.css"
+    "revision": "f83c242ea2f7ecc289d8",
+    "url": "/PortFolio/static/css/main.c0418aad.chunk.css"
   },
   {
-    "revision": "b2e7af69a34ebdf9080d",
-    "url": "/PortFolio/static/js/2.48d72f31.chunk.js"
+    "revision": "024ce6a8f740056ff6e5",
+    "url": "/PortFolio/static/js/2.eebf7464.chunk.js"
   },
   {
-    "revision": "51ab2c1c01c072a65c89",
-    "url": "/PortFolio/static/js/main.18f78d32.chunk.js"
+    "revision": "f83c242ea2f7ecc289d8",
+    "url": "/PortFolio/static/js/main.b50933b9.chunk.js"
   },
   {
     "revision": "c501042fb4ff7d612a1f",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "65b1d9e7d57565495bcf848a40ac4645",
     "url": "/PortFolio/static/media/fast-me.65b1d9e7.jpg"
+  },
+  {
+    "revision": "7cd22642f6b6800882eb28585cd89a54",
+    "url": "/PortFolio/static/media/fast.7cd22642.jpg"
   },
   {
     "revision": "0ff1a6f08182be4aa63a0b54da1b9e57",
@@ -72,12 +76,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PortFolio/static/media/portfolio-bg.20bb33e4.jpg"
   },
   {
+    "revision": "d95c9a92182aa12a2a1bb3cd25c2370e",
+    "url": "/PortFolio/static/media/portfolioMain.d95c9a92.jpg"
+  },
+  {
     "revision": "4009eef3b3e291f296e71962c70895c5",
     "url": "/PortFolio/static/media/react.4009eef3.svg"
   },
   {
+    "revision": "823b47cd58a5a219c83685fe9ed81c8e",
+    "url": "/PortFolio/static/media/status.823b47cd.jpg"
+  },
+  {
     "revision": "2826cb3c55ad947bd1a2d1962c50b376",
     "url": "/PortFolio/static/media/styeld.2826cb3c.png"
+  },
+  {
+    "revision": "c450700c88a7263278ac5fc39345b3fd",
+    "url": "/PortFolio/static/media/sungjin8bit.c450700c.svg"
+  },
+  {
+    "revision": "79b59ad4b388fc7097cdc491a9005204",
+    "url": "/PortFolio/static/media/team.79b59ad4.jpg"
   },
   {
     "revision": "3de182d2120823fe49c27eeb1765c53a",
