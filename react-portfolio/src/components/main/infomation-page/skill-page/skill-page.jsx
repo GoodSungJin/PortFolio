@@ -10,6 +10,7 @@ import logoReact from '../../../../styles/image/skill-logo/react.svg'
 import logoTypeScript from '../../../../styles/image/skill-logo/typescript.svg'
 import logoGithub from '../../../../styles/image/skill-logo/github.svg'
 import logoStyled from '../../../../styles/image/skill-logo/styeld.png'
+import bit8 from '../../../../styles/image/sungjin8bit.svg';
 
 const SkillPage = () => {
   const skillState = [
@@ -74,7 +75,7 @@ const SkillPage = () => {
   return (
     <SectionSkill>
       <h2 className="a11y-hidden">기술 소개</h2>
-      <DotIcon>도트</DotIcon>
+      <DotIcon dot={bit8}></DotIcon>
       <P>안녕하세요, <strong>코딩을 즐기는 개발자</strong> 최성진입니다.</P>
       <DivContain>
         <H3Infomation>Skill</H3Infomation>

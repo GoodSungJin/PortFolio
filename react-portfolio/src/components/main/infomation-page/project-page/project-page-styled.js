@@ -66,6 +66,10 @@ export const Figure = styled.figure`
   border: solid 1px #e8e8e8;
   background-color: #fcfcfc;
   margin-bottom: 25px;
+
+  .wrapper-img {
+    overflow: hidden;
+  }
   
   &:hover {
     border: solid 1px #e9e9e9;
@@ -74,7 +78,7 @@ export const Figure = styled.figure`
     transition: transform .35s;
       
     img {
-      transform:scale(1.1);
+      transform:scale(1.2);
       transition: transform .35s;
     }
   }
@@ -128,8 +132,7 @@ export const ModalTime = styled.span`
 
 export const ModalHead = styled.div`
   flex-direction: column-reverse;
-  border-bottom: unset;
-  
+  border-bottom: unset; 
 
   > div {
     margin: 0 auto;
@@ -144,6 +147,7 @@ export const ModalHead = styled.div`
 
   @media ${Tablet} {
     margin-bottom: 40px;
+    padding: unset;
   }
 `;
 
@@ -182,6 +186,7 @@ export const ModalBody = styled.div`
   }
 
   @media ${Tablet} {
+    padding: unset;
     > div {
       &:nth-child(1) {
         padding: 25px 30px;
@@ -206,7 +211,7 @@ export const Li = styled.li`
     margin: 0 auto 20px auto;
     display: block;
     width: 80%;
-    border: solid 1px #707070;
+    border: solid 1px #dcdcdc;
     background-color: #ffffff;
   }
 

@@ -5,8 +5,16 @@ import { Desktop, Tablet } from '../../../../styles/css/shared-styled';
 export const SectionSkill = styled.section`
   width: 100vw;
   text-align: center;
-  padding-bottom: 75px;
-  padding-top: 120px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  @media ${Tablet} {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+
+  @media ${Desktop} {
+  }
 `;
 
 export const DivContain = styled.div`
@@ -30,8 +38,8 @@ export const DivContain = styled.div`
 export const DotIcon = styled.p`
   width: 56px;
   height: 56px;
-  border: solid 1px #707070;
   margin: 0 auto;
+  background-image: url(${props => props.dot});
 `;
 
 
@@ -155,7 +163,7 @@ export const Dt = styled.dt`
         content: '';
         display: inline-block;
         width: 45%;
-        margin-right: 3%;
+        margin-right: 2%;
         height: 6px;
         border-radius: 50px;
         background: linear-gradient( to right, ${props => props.color} ${props => props.proficiency}%, #e8e8e8 ${props => props.proficiency}%);
@@ -182,12 +190,12 @@ export const Dt = styled.dt`
     span {
       &:first-child {
         font-size: 2.8rem;
-        width: ${100 * 260 / 1920}vw;
+        width: ${100 * 290 / 1920}vw;
       }
 
       &:last-child {
         &:before {
-          width: ${100 * 180 / 1920}vw;
+          width: ${100 * 160 / 1920}vw;
         }
       }
     }

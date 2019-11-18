@@ -3,10 +3,15 @@ import { H3Project, SectionProject, DivContain, Figcaption, Figure, Img, SpanTim
 
 import portfolio from '../../../../styles/image/project/pofol-small.jpg'
 import megabox from '../../../../styles/image/project/megabox.jpg'
-import fastapp from '../../../../styles/image/project/fast-me.jpg'
+import fastappMain from '../../../../styles/image/project/fast.jpg'
+import fastappImg from '../../../../styles/image/project/fast-me.jpg'
+import statusImg from '../../../../styles/image/project/status.jpg'
 import baemin from '../../../../styles/image/project/baemin-small.jpg'
 import loginImg from '../../../../styles/image/project/megabox-login.jpg';
 import reserveImg from '../../../../styles/image/project/megabox-reserve.jpg';
+import teamImg from '../../../../styles/image/project/team.jpg';
+import mainPortFolioImg from '../../../../styles/image/project/portfolioMain.jpg';
+import portFolioHeaderImg from '../../../../styles/image/project/portFolioHeader.jpg';
 
 const ProjectPage = () => {
   const project = [
@@ -52,7 +57,7 @@ const ProjectPage = () => {
           ]
         },
         {
-          img : reserveImg,
+          img : teamImg,
           name: '프론트엔드 팀장',
           ddList: [
             {
@@ -80,7 +85,7 @@ const ProjectPage = () => {
       team: '프론트엔드 1명, 디자이너 1명',
       inner: [
         {
-          img : loginImg,
+          img : mainPortFolioImg,
           name: '메인 페이지',
           ddList: [
             {
@@ -98,7 +103,7 @@ const ProjectPage = () => {
           ]
         },
         {
-          img : loginImg,
+          img : portFolioHeaderImg,
           name: '헤더',
           ddList: [
             {
@@ -116,13 +121,13 @@ const ProjectPage = () => {
     {
       name: '학생관리 웹앱',
       date: '2019.06.28 ~ 2019.06.28',
-      img: fastapp,
+      img: fastappMain,
       intro: '패스트캠퍼스 해커톤으로 9시간 내에 주제를 정하고 역할을 분담하여, 프로젝트를 진행했습니다. 예정돼 있던 백엔드와의 협업이 불가하여 로컬 서버를 통해 JSON형식의 데이터 통신을 사용했습니다. 15팀 중 최고의 유용함 상을 수상했습니다.',
       mySkill: 'Angular, TypeScript, HTML, CSS/Sass, Github, Slack',
       team: '프론트엔드 3명',
       inner: [
         {
-          img : loginImg,
+          img : statusImg,
           name: 'JSON',
           ddList: [
             {
@@ -132,7 +137,7 @@ const ProjectPage = () => {
           ]
         },
         {
-          img : reserveImg,
+          img : fastappImg,
           name: '출석 체크 페이지',
           ddList: [
             {
@@ -156,7 +161,7 @@ const ProjectPage = () => {
       team: '프론트엔드 2명',
       inner: [
         {
-          img : loginImg,
+          img : baemin,
           name: '메인 페이지',
           ddList: [
             {
@@ -184,7 +189,9 @@ const ProjectPage = () => {
             <>
               <Figure key={idx + item.name} className="btn btn-light" data-toggle="modal" 
               data-target={'.a' + idx}>
-                <Img img={item.img} />
+                <div className="wrapper-img">
+                  <Img img={item.img} />
+                </div>
                 <Figcaption>
                   {item.name}
                   <SpanTime>{item.date}</SpanTime>
@@ -234,7 +241,7 @@ const ProjectPage = () => {
                                         <>
                                         <dt key={item.subName + idx}>{item.subName}</dt>
                                         <dd key={item.subName + idx + 1}>{item.value}
-                                          { item.link ? <a href={item.link}> 발표자료</a> : null }
+                                          { item.link ? <a href={item.link}> 발표자료 보기</a> : null }
                                         </dd>
                                         </>
                                       )
