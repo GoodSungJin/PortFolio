@@ -178,10 +178,12 @@ export const Dt = styled.dt`
     span {
       &:first-child {
         display: inline-block;
-        width: 12.77vw;
+        width: 21vw;
       }
       &:last-child {
-        font-size: 1.3rem;
+        &:before {
+          width: ${100 * 160 / 1920}vw;
+        }
       }
     }
   }
@@ -194,6 +196,7 @@ export const Dt = styled.dt`
       }
 
       &:last-child {
+        font-size: 1.2rem;
         &:before {
           width: ${100 * 160 / 1920}vw;
         }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // 미디어 쿼리
-export const Desktop = '(min-width: 1200px)';
+export const Desktop = '(min-width: 1441px)';
 export const Tablet = '(min-width: 768px)';
 
 

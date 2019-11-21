@@ -12,7 +12,7 @@ export const SectionHeader = styled.section`
   background-color: rgba(255,255,255,0.8);
   transition: .5s;
 
-  @media ${Desktop} {
+  @media (min-width: 1200px) {
     background-color: rgba(0, 0, 0, 0);
   }
 

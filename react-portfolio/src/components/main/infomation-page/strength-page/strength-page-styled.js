@@ -74,6 +74,19 @@ export const Dl = styled.dl`
   }
 `;
 
+export const DivInDl = styled.div`
+  &:before {
+    content: '';
+    display: block;
+    width: 68px;
+    height: 68px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    background-image: url(${props => props.icon});
+    margin: 0 auto 20px;
+  }
+`;
+
 export const Dt = styled.dt`
   height: 41px;
   font-size: 2.3rem;
