@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/PortFolio/static/css/main.c0418aad.chunk.css",
-    "main.js": "/PortFolio/static/js/main.b50933b9.chunk.js",
-    "main.js.map": "/PortFolio/static/js/main.b50933b9.chunk.js.map",
+    "main.js": "/PortFolio/static/js/main.6a40a1a7.chunk.js",
+    "main.js.map": "/PortFolio/static/js/main.6a40a1a7.chunk.js.map",
     "runtime-main.js": "/PortFolio/static/js/runtime-main.805a6867.js",
     "runtime-main.js.map": "/PortFolio/static/js/runtime-main.805a6867.js.map",
-    "static/js/2.eebf7464.chunk.js": "/PortFolio/static/js/2.eebf7464.chunk.js",
-    "static/js/2.eebf7464.chunk.js.map": "/PortFolio/static/js/2.eebf7464.chunk.js.map",
+    "static/js/2.acf03189.chunk.js": "/PortFolio/static/js/2.acf03189.chunk.js",
+    "static/js/2.acf03189.chunk.js.map": "/PortFolio/static/js/2.acf03189.chunk.js.map",
     "index.html": "/PortFolio/index.html",
-    "precache-manifest.277730effa77d8c5315950ff59b4dc10.js": "/PortFolio/precache-manifest.277730effa77d8c5315950ff59b4dc10.js",
+    "precache-manifest.13061198ba88fe86688c6c248525cfcb.js": "/PortFolio/precache-manifest.13061198ba88fe86688c6c248525cfcb.js",
     "service-worker.js": "/PortFolio/service-worker.js",
     "static/css/main.c0418aad.chunk.css.map": "/PortFolio/static/css/main.c0418aad.chunk.css.map",
     "static/media/index.css": "/PortFolio/static/media/NotoSans-Regular.49c56daa.otf",
@@ -19,6 +19,9 @@
     "static/media/fast.jpg": "/PortFolio/static/media/fast.7cd22642.jpg",
     "static/media/github.svg": "/PortFolio/static/media/github.0ff1a6f0.svg",
     "static/media/html.svg": "/PortFolio/static/media/html.f0361c5e.svg",
+    "static/media/icon_bulb.svg": "/PortFolio/static/media/icon_bulb.68ffd521.svg",
+    "static/media/icon_communication.svg": "/PortFolio/static/media/icon_communication.a84718ad.svg",
+    "static/media/icon_study.svg": "/PortFolio/static/media/icon_study.a7d187b2.svg",
     "static/media/javascript.svg": "/PortFolio/static/media/javascript.2d2e31cc.svg",
     "static/media/logo.png": "/PortFolio/static/media/logo.0e283a06.png",
     "static/media/megabox-reserve.jpg": "/PortFolio/static/media/megabox-reserve.82751798.jpg",
@@ -35,8 +38,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.805a6867.js",
-    "static/js/2.eebf7464.chunk.js",
+    "static/js/2.acf03189.chunk.js",
     "static/css/main.c0418aad.chunk.css",
-    "static/js/main.b50933b9.chunk.js"
+    "static/js/main.6a40a1a7.chunk.js"
   ]
 }
