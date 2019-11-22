@@ -12,6 +12,7 @@ import reserveImg from '../../../../styles/image/project/megabox-reserve.jpg';
 import teamImg from '../../../../styles/image/project/team.jpg';
 import mainPortFolioImg from '../../../../styles/image/project/portfolioMain.jpg';
 import portFolioHeaderImg from '../../../../styles/image/project/portFolioHeader.jpg';
+import todoListImg from '../../../../styles/image/project/todoList.jpg';
 
 const ProjectPage = () => {
   const project = [
@@ -175,6 +176,42 @@ const ProjectPage = () => {
           ]
         }
       ]
+    },
+    {
+      name: 'TodoList',
+      date: '2019.05.24 ~ 2019.05.24',
+      img: todoListImg,
+      intro: 'JavaScript 를 이용한 첫 해커톤으로 HTML, CSS를 대신해 JavaScript 만을 이용해 프로젝트를 진행했습니다. 라이브러리를 사용하지 않고 배달의 민족 OnePageScroll 기능 구현을 목표로 했습니다.',
+      mySkill: 'HTML, CSS, JavaScript, Jquery, Bootstrap',
+      team: '프론트엔드 2명',
+      inner: [
+        {
+          img : todoListImg,
+          name: 'Version',
+          ddList: [
+            {
+              subName: 'V1: React Components',
+              value: 'Class Componenet의 setState와, Hooks의 useState로 각각 구현했습니다.',
+            },
+            {
+              subName: 'V2: Componenet 분리',
+              value: 'Component를 각 기능에 맞게 분리하여 함수를 관리했습니다.',
+            },
+            {
+              subName: 'V3: Context API',
+              value: 'Context API를 사용해 상태를 관리했습니다.',
+            },
+            {
+              subName: 'V4: TypeScript',
+              value: 'TypeScript를 적용하고, interface와 type등을 사용하여 상태를 보다 안전하게 관리했습니다.',
+            },
+            {
+              subName: 'V5: Redux',
+              value: 'Redux의 Action, Dispatch, Reducer등을 이해하여 상태를 관리하고, 보다 편리한 상태관리를 위해 Custom Hooks를 만들어 사용했습니다.',
+            }
+          ]
+        }
+      ]
     }
   ];
 
@@ -204,8 +241,8 @@ const ProjectPage = () => {
                   <div className="modal-content">
                     <ModalHead className="modal-header">
                       <div>
-                        <h4 className="modal-title h1" id="myExtraLargeModalLabel">메가박스 클론 프로젝트</h4>
-                        <ModalTime>2019.07.15 ~ 2019.08.08</ModalTime>
+                        <h4 className="modal-title h1" id="myExtraLargeModalLabel">{item.name}</h4>
+                        <ModalTime>{item.date}</ModalTime>
                       </div>
                       <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>

@@ -84,7 +84,7 @@ export const Figure = styled.figure`
   }
 
   @media ${Tablet} {
-    width: 36vw;
+    width: 27vw;
   }
 
   @media ${Desktop} {
