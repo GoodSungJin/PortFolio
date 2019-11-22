@@ -178,16 +178,16 @@ const ProjectPage = () => {
       ]
     },
     {
-      name: 'TodoList',
-      date: '2019.05.24 ~ 2019.05.24',
+      name: 'Todo List',
+      date: '2019.11.01 ~ 2019.11.20',
       img: todoListImg,
-      intro: 'JavaScript 를 이용한 첫 해커톤으로 HTML, CSS를 대신해 JavaScript 만을 이용해 프로젝트를 진행했습니다. 라이브러리를 사용하지 않고 배달의 민족 OnePageScroll 기능 구현을 목표로 했습니다.',
-      mySkill: 'HTML, CSS, JavaScript, Jquery, Bootstrap',
-      team: '프론트엔드 2명',
+      intro: 'React 스터디를 진행하면서 만든 프로젝트로 기본적인 CRUD를 구현하고 각 기능을 구분해 version 1 ~ 5까지 Class Component와 Hooks로 구현했습니다.',
+      mySkill: 'React, Redux, React-Redux, Styled Components, HTML, CSS, JavaScript',
+      team: '프론트엔드 1명',
       inner: [
         {
           img : todoListImg,
-          name: 'Version',
+          name: 'Todo List',
           ddList: [
             {
               subName: 'V1: React Components',
