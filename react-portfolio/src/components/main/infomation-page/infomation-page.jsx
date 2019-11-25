@@ -13,7 +13,6 @@ const InfomationPage = ({ refInfo }) => {
       <SkillPage />
       <StrengthPage />
       <ProjectPage />
-      <ContactPage />
     </Div>
   )
 };

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { SectionHeader, DivContain, H1HOME, Nav } from './header-styled';
 
 const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscrollState }) => {
-  const navState = ['Home', 'About me', 'Project', 'Contact'];
+  const navState = ['Home', 'About me', 'Project'];
 
 
   useEffect(() => {

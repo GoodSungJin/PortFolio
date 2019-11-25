@@ -90,17 +90,18 @@ function App() {
 
   const onScrollSpy = () => {
     const plus = refInfomationPage.current.scrollTop + refInfomationPage.current.offsetTop;
+
     if (window.scrollY !== refInfomationPage.current.offsetTop) return;
 
     if (plus >= refInfomationPage.current.childNodes[0].offsetTop && plus < refInfomationPage.current.childNodes[2].offsetTop) {
       return setscrollState('About me');
     }
-    if (plus >= refInfomationPage.current.childNodes[2].offsetTop && plus < refInfomationPage.current.childNodes[3].offsetTop) {
+    if (plus >= refInfomationPage.current.childNodes[2].offsetTop) {
       return setscrollState('Project');
     }
-    if (plus >= refInfomationPage.current.childNodes[3].offsetTop) {
-      return setscrollState('Contact');
-    }
+    // if (plus >= refInfomationPage.current.childNodes[3].offsetTop) {
+    //   return setscrollState('Contact');
+    // }
   };
 
   return (
