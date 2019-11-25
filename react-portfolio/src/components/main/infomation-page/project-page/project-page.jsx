@@ -1,5 +1,7 @@
-import React from 'react';
-import { H3Project, SectionProject, DivContain, Figcaption, Figure, Img, SpanTime, DivFlex, ModalTime, ModalBody, ModalHead, Li } from './project-page-styled';
+import React, { useEffect, useState, memo } from 'react';
+import { H3Project, SectionProject, DivContain, Figcaption, Figure, Img, SpanTime, DivFlex } from './project-page-styled';
+import { ButtonToolbar, Modal } from 'react-bootstrap';
+import './project-page.scss';
 
 import portfolio from '../../../../styles/image/project/pofol-small.jpg'
 import megabox from '../../../../styles/image/project/megabox.jpg'
@@ -23,6 +25,16 @@ const ProjectPage = () => {
       intro: '패스트캠퍼스 파이널 프로젝트로 메가박스 클라이언트 사이드 클론 프로젝트를 진행했습니다. 프로젝트의 팀장으로 전체기획, 설계, 일정수립과 조율을 담당하고 API설계 등 백엔드와의 협업 및 커뮤니케이션을 주도했습니다.',
       mySkill: 'Angular, TypeScript, Rxjs, HTML, CSS/Sass, JavaScript, ES6+, GitHub, Zenhub, Slack, Notion, ReDoc(API문서), REST API',
       team: '프론트엔드 4명, 백엔드 3명, IOS 2명',
+      view: [
+        {
+          name: 'Github',
+          link: 'https://github.com/final-project-megabox/frontend'
+        },
+        {
+          name: 'Site',
+          link: 'http://www.megabox.website/home'
+        },
+      ],
       inner: [
         {
           img : loginImg,
@@ -84,6 +96,16 @@ const ProjectPage = () => {
       intro: 'React 스터디를 진행하고 만든 첫 React 프로젝트로, Styled Component를 처음 사용해 본 반응형 프로젝트입니다. Hooks를 기반으로 useReducer, useEffect, useRef 를 사용한 간단한 개인 포트폴리오 사이트입니다.',
       mySkill: 'React, Styled Component, HTML, CSS, JavsScript, Bootstrap, GitHub Pages, Zeplin',
       team: '프론트엔드 1명, 디자이너 1명',
+      view: [
+        {
+          name: 'Github',
+          link: 'https://github.com/GoodSungJin/PortFolio'
+        },
+        {
+          name: 'Github Pages',
+          link: 'https://goodsungjin.github.io/PortFolio/'
+        },
+      ],
       inner: [
         {
           img : mainPortFolioImg,
@@ -126,6 +148,16 @@ const ProjectPage = () => {
       intro: '패스트캠퍼스 해커톤으로 9시간 내에 주제를 정하고 역할을 분담하여, 프로젝트를 진행했습니다. 예정돼 있던 백엔드와의 협업이 불가하여 로컬 서버를 통해 JSON형식의 데이터 통신을 사용했습니다. 15팀 중 최고의 유용함 상을 수상했습니다.',
       mySkill: 'Angular, TypeScript, HTML, CSS/Sass, Github, Slack',
       team: '프론트엔드 3명',
+      view: [
+        {
+          name: 'Github',
+          link: 'https://github.com/GoodSungJin/Fastcampus-Student-Managing'
+        },
+        {
+          name: 'DevPost',
+          link: 'https://devpost.com/software/iwam'
+        },
+      ],
       inner: [
         {
           img : statusImg,
@@ -160,6 +192,16 @@ const ProjectPage = () => {
       intro: 'JavaScript 를 이용한 첫 해커톤으로 HTML, CSS를 대신해 JavaScript 만을 이용해 프로젝트를 진행했습니다. 라이브러리를 사용하지 않고 배달의 민족 OnePageScroll 기능 구현을 목표로 했습니다.',
       mySkill: 'HTML, CSS, JavaScript, Jquery, Bootstrap',
       team: '프론트엔드 2명',
+      view: [
+        {
+          name: 'Github',
+          link: 'https://github.com/GoodSungJin/project-baemingers/tree/master'
+        },
+        {
+          name: 'YouTube',
+          link: 'https://youtu.be/-29o0H1IyxM'
+        },
+      ],
       inner: [
         {
           img : baemin,
@@ -184,6 +226,12 @@ const ProjectPage = () => {
       intro: 'React 스터디를 진행하면서 만든 프로젝트로 기본적인 CRUD를 구현하고 각 기능을 구분해 version 1 ~ 5까지 Class Component와 Hooks로 구현했습니다.',
       mySkill: 'React, Redux, React-Redux, Styled Components, HTML, CSS, JavaScript',
       team: '프론트엔드 1명',
+      view: [
+        {
+          name: 'Github',
+          link: 'https://github.com/GoodSungJin/react-todolist'
+        }
+      ],
       inner: [
         {
           img : todoListImg,
@@ -215,6 +263,43 @@ const ProjectPage = () => {
     }
   ];
 
+  const [modal0Show, setModal0Show] = useState(false);
+  const [modal1Show, setModal1Show] = useState(false);
+  const [modal2Show, setModal2Show] = useState(false);
+  const [modal3Show, setModal3Show] = useState(false);
+  const [modal4Show, setModal4Show] = useState(false);
+  const [id, setId] = useState();
+
+  useEffect(() => {
+    window.onpopstate = window.history.onpushstate = function(e) {
+      if(window.location.href.split('/').pop().indexOf('modal') === -1) {
+        eval(`setModal${id}Show`)(false);
+      }
+    }
+  }, [id])
+
+  const modalToggle = (id, value) => {
+    window.history.pushState({}, 'modal', '/modal');
+    setId(id);
+    
+    switch(id) {
+      case 0:
+        return setModal0Show(value)
+      case 1:
+        return setModal1Show(value)
+      case 2:
+        return setModal2Show(value)
+      case 3:
+        return setModal3Show(value)
+      case 4:
+        return setModal4Show(value)
+    };
+  };
+
+  const modalSelector = (value) => {
+    return eval(`modal${value}Show`)
+  };
+
   return (
     <SectionProject>
       <h2 className="a11y-hidden">프로젝트 소개</h2>
@@ -223,78 +308,84 @@ const ProjectPage = () => {
         <DivFlex>
           {project.map((item, idx) => {
             return (
-            <>
-              <Figure key={idx + item.name} className="btn btn-light" data-toggle="modal" 
-              data-target={'.a' + idx}>
-                <div className="wrapper-img">
-                  <Img img={item.img} />
-                </div>
-                <Figcaption>
-                  {item.name}
-                  <SpanTime>{item.date}</SpanTime>
-                </Figcaption>
-              </Figure>
+              <ButtonToolbar>
+                <Figure key={idx + item.name} onClick={() => modalToggle(idx, true)} >
+                  <div className="wrapper-img">
+                    <Img img={item.img} />
+                  </div>
+                  <Figcaption>
+                    {item.name}
+                    <SpanTime>{item.date}</SpanTime>
+                  </Figcaption>
+                </Figure>
 
-              <div key={idx + item.name + 1} className={`modal fade ` + ('a' + idx)}
-              tabIndex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-xl">
-                  <div className="modal-content">
-                    <ModalHead className="modal-header">
+                <Modal size="xl" show={modalSelector(idx)} aria-labelledby={'a' + idx}
+                onHide={() => modalToggle(idx, false)}>
+                  <Modal.Header closeButton>
+                    <Modal.Title id={'a' + idx}>
                       <div>
-                        <h4 className="modal-title h1" id="myExtraLargeModalLabel">{item.name}</h4>
-                        <ModalTime>{item.date}</ModalTime>
+                        <h4>{item.name}</h4>
+                        <span>{item.date}</span>
                       </div>
-                      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </ModalHead>
-                    <ModalBody className="modal-body">
-                      <div>
-                        <div className="intro">
-                          <p>{item.intro}</p>
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <div className="info-contain">
+                      <div className="intro">
+                        <p>{item.intro}</p>
+                      </div>
+                      <div className="sub-intro">
+                        <div>
+                          <h5>참여 인원</h5>
+                          <p>{item.team}</p>
                         </div>
-                        <div className="sub-intro">
-                          <div>
-                            <h5>참여 인원</h5>
-                            <p>{item.team}</p>
-                          </div>
-                          <div>
-                            <h5>사용 기술</h5>
-                            <p>{item.mySkill}</p>
-                          </div>
+                        <div>
+                          <h5>사용 기술</h5>
+                          <p>{item.mySkill}</p>
+                        </div>
+                        <div>
+                          <h5>바로 가기</h5>
+                          <p>
+                            {item.view.map(item => {
+                              return (
+                                <a href={item.link}>
+                                  {item.name}
+                                </a>
+                              )
+                            })}
+                          </p>
                         </div>
                       </div>
-                      <div>
-                        <ul>
-                          {item.inner.map((item, idx) => {
-                            return (
-                              <Li key={item.name + idx}>
-                                <img src={item.img} alt={item.name + '이미지'} />
-                                <div>
-                                  <h6>{item.name}</h6>
-                                  <dl>
-                                    {item.ddList.map((item, idx) => {
-                                      return (
-                                        <>
-                                        <dt key={item.subName + idx}>{item.subName}</dt>
-                                        <dd key={item.subName + idx + 1}>{item.value}
-                                          { item.link ? <a href={item.link}> 발표자료 보기</a> : null }
-                                        </dd>
-                                        </>
-                                      )
-                                    })}
-                                  </dl>
-                                </div>
-                              </Li>
-                            )
+                    </div>
+                    <div>
+                      <ul>
+                        {item.inner.map((item, idx) => {
+                          return (
+                            <li key={item.name + idx} className="project-inner-list">
+                              <img src={item.img} alt={item.name + '이미지'} />
+                              <div>
+                                <h6>{item.name}</h6>
+                                <dl>
+                                  {item.ddList.map((item, idx) => {
+                                    return (
+                                      <>
+                                      <dt key={item.subName + idx}>{item.subName}</dt>
+                                      <dd key={item.subName + idx + 1}>{item.value}
+                                        { item.link ? <a href={item.link}> 발표자료 보기</a> : null }
+                                      </dd>
+                                      </>
+                                    )
+                                  })}
+                                </dl>
+                              </div>
+                            </li>
+                          )
                           })}
                         </ul>
                       </div>
-                    </ModalBody>
-                  </div>
-                </div>
-              </div>
-            </>
+                    </Modal.Body>
+                </Modal>
+              </ButtonToolbar>
             )
           })}
         </DivFlex>
@@ -303,4 +394,4 @@ const ProjectPage = () => {
   )
 };
 
-export default ProjectPage;
+export default memo(ProjectPage);

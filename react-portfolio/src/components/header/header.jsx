@@ -22,6 +22,7 @@ const Header = ({ refHeader, refMainPage, refInfomationPage, scrollState, setscr
     refHeader.current.style.color = '#fff';
     refHeader.current.style.backgroundColor = null;
     refHeader.current.style.boxShadow = null;
+    
     setTimeout(() => {
       setscrollState('Home');
     }, 600);
