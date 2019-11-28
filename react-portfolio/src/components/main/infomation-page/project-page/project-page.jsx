@@ -279,26 +279,52 @@ const ProjectPage = () => {
   }, [id])
 
   const modalToggle = (id, value) => {
-    window.history.pushState({}, 'modal', '/modal');
-    setId(id);
-    
     switch(id) {
       case 0:
-        return setModal0Show(value)
+        setModal0Show(value);
+
+        if(window.innerWidth > 1000) return;
+        window.history.pushState({}, 'modal', '/modal');
+        setId(id);
+        return;
       case 1:
-        return setModal1Show(value)
+        setModal1Show(value)
+
+        if(window.innerWidth > 1000) return;
+        window.history.pushState({}, 'modal', '/modal');
+        setId(id);
+        return;
       case 2:
-        return setModal2Show(value)
+        setModal2Show(value);
+
+        if(window.innerWidth > 1000) return;
+        window.history.pushState({}, 'modal', '/modal');
+        setId(id);
+        return;
       case 3:
-        return setModal3Show(value)
+        setModal3Show(value);
+
+        if(window.innerWidth > 1000) return;
+        window.history.pushState({}, 'modal', '/modal');
+        setId(id);
+        return;
       case 4:
-        return setModal4Show(value)
+        setModal4Show(value);
+
+        if(window.innerWidth > 1000) return;
+        window.history.pushState({}, 'modal', '/modal');
+        setId(id);
+        return;
     };
   };
 
   const modalSelector = (value) => {
     return eval(`modal${value}Show`)
   };
+
+  const historyBack = () => {
+    window.history.back();
+  }
 
   return (
     <SectionProject>
@@ -362,7 +388,7 @@ const ProjectPage = () => {
                         {item.inner.map((item, idx) => {
                           return (
                             <li key={item.name + idx} className="project-inner-list">
-                              <img src={item.img} alt={item.name + '이미지'} />
+                              <img src={item.img} alt={item.name + '이미지'} className="inner-img" />
                               <div>
                                 <h6>{item.name}</h6>
                                 <dl>

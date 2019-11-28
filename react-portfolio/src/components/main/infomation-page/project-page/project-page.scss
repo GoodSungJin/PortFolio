@@ -138,12 +138,14 @@ $Tablet: 'min-width: 768px';
 
       .project-inner-list {
         display: flex;
-    
-        img {
+
+        .inner-img {
           height: 238px;
-          width: 100%;
+          width: 350px;
           margin: unset;
           display: unset;
+          margin-right: 30px;
+          flex-shrink: 0;
         }
     
         > div {
@@ -154,11 +156,6 @@ $Tablet: 'min-width: 768px';
           dl {
             font-size: 1.6rem;
           }
-        }
-    
-        img {
-          width: 350px;
-          margin-right: 30px;
         }
       }
     }
