@@ -7,7 +7,6 @@ export const MainTag = styled.main`
 
 
 @media ${Desktop} {
-  /* overflow-y: hidden; */
   
 }
 `;
