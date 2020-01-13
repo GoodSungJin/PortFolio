@@ -36,7 +36,7 @@ const ProjectPage = () => {
         },
         {
           name: 'YouTube',
-          link: 'https://youtu.be/GtaJe3A6oCk'
+          link: 'https://youtu.be/lvqJahf1voo'
         },
       ],
       inner: [
