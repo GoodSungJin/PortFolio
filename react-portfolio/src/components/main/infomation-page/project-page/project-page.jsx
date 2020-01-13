@@ -34,6 +34,10 @@ const ProjectPage = () => {
           name: 'Site',
           link: 'http://www.megabox.website/home'
         },
+        {
+          name: 'YouTube',
+          link: 'https://youtu.be/GtaJe3A6oCk'
+        },
       ],
       inner: [
         {

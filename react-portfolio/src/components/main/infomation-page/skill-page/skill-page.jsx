@@ -50,9 +50,9 @@ const SkillPage = () => {
       color: '#B52E31'
     },
     {
-      name: "React",
-      value: "현재 React 스터디를 진행하여 Class Component와 Hooks를 학습하고, 이를 활용해 TodoList, 숫자야구 등 간단한 게임을 구현할 수 있습니다.",
-      proficiency: 35,
+      name: "React / Redux",
+      value: "Class Component와 Hooks를 활용해 포트폴리오 사이트, TodoList, 숫자야구 등 간단한 게임을 구현할 수 있으며, Redux의 Ducks 패턴을 이용해 상태관리를 할 수 있습니다.",
+      proficiency: 55,
       img: logoReact,
       color: '#53C1DE'
     },
