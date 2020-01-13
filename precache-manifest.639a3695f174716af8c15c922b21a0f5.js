@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "974a9f53c0c6597b8c2d45deeed2458a",
+    "revision": "51fa03293aaaaf5f40b7d941135b4ff4",
     "url": "/PortFolio/index.html"
   },
   {
-    "revision": "e4485d74ab4c006366cc",
-    "url": "/PortFolio/static/css/main.2022d1f6.chunk.css"
+    "revision": "54f19abc053210b0fd38",
+    "url": "/PortFolio/static/css/main.f4a7a06b.chunk.css"
   },
   {
-    "revision": "2b9bfe1d6b627f7559fa",
-    "url": "/PortFolio/static/js/2.7467c8a7.chunk.js"
+    "revision": "53dfa41b8d0fe94ce416",
+    "url": "/PortFolio/static/js/2.1f890afb.chunk.js"
   },
   {
-    "revision": "e4485d74ab4c006366cc",
-    "url": "/PortFolio/static/js/main.6cb183f6.chunk.js"
+    "revision": "54f19abc053210b0fd38",
+    "url": "/PortFolio/static/js/main.63c42a27.chunk.js"
   },
   {
-    "revision": "c501042fb4ff7d612a1f",
-    "url": "/PortFolio/static/js/runtime-main.805a6867.js"
+    "revision": "e4071ed167ca019150a6",
+    "url": "/PortFolio/static/js/runtime-main.afc0bb32.js"
   },
   {
     "revision": "49c56daa4f52da2c09465803c7cfdff1",
@@ -52,16 +52,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PortFolio/static/media/html.f0361c5e.svg"
   },
   {
-    "revision": "68ffd521d92b779382b9cdc0e1bcb579",
-    "url": "/PortFolio/static/media/icon_bulb.68ffd521.svg"
+    "revision": "09cc5413f5509ce4cc99999976bb83bf",
+    "url": "/PortFolio/static/media/icon_bulb.09cc5413.svg"
   },
   {
-    "revision": "a84718ad3f69cd077ccac15d7fcc57f4",
-    "url": "/PortFolio/static/media/icon_communication.a84718ad.svg"
+    "revision": "a1b3b6f2f4111b080624078516f171df",
+    "url": "/PortFolio/static/media/icon_communication.a1b3b6f2.svg"
   },
   {
-    "revision": "a7d187b2e252280b73e70032e3543b79",
-    "url": "/PortFolio/static/media/icon_study.a7d187b2.svg"
+    "revision": "e97045b0c5abb88149c5d422eaa20569",
+    "url": "/PortFolio/static/media/icon_study.e97045b0.svg"
   },
   {
     "revision": "2d2e31cc63a96c7e6044f52d30fd21b9",

@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/PortFolio/static/css/main.2022d1f6.chunk.css",
-    "main.js": "/PortFolio/static/js/main.6cb183f6.chunk.js",
-    "main.js.map": "/PortFolio/static/js/main.6cb183f6.chunk.js.map",
-    "runtime-main.js": "/PortFolio/static/js/runtime-main.805a6867.js",
-    "runtime-main.js.map": "/PortFolio/static/js/runtime-main.805a6867.js.map",
-    "static/js/2.7467c8a7.chunk.js": "/PortFolio/static/js/2.7467c8a7.chunk.js",
-    "static/js/2.7467c8a7.chunk.js.map": "/PortFolio/static/js/2.7467c8a7.chunk.js.map",
+    "main.css": "/PortFolio/static/css/main.f4a7a06b.chunk.css",
+    "main.js": "/PortFolio/static/js/main.63c42a27.chunk.js",
+    "main.js.map": "/PortFolio/static/js/main.63c42a27.chunk.js.map",
+    "runtime-main.js": "/PortFolio/static/js/runtime-main.afc0bb32.js",
+    "runtime-main.js.map": "/PortFolio/static/js/runtime-main.afc0bb32.js.map",
+    "static/js/2.1f890afb.chunk.js": "/PortFolio/static/js/2.1f890afb.chunk.js",
+    "static/js/2.1f890afb.chunk.js.map": "/PortFolio/static/js/2.1f890afb.chunk.js.map",
     "index.html": "/PortFolio/index.html",
-    "precache-manifest.c50f65fb41399a36f409aeb12e6b1140.js": "/PortFolio/precache-manifest.c50f65fb41399a36f409aeb12e6b1140.js",
+    "precache-manifest.639a3695f174716af8c15c922b21a0f5.js": "/PortFolio/precache-manifest.639a3695f174716af8c15c922b21a0f5.js",
     "service-worker.js": "/PortFolio/service-worker.js",
-    "static/css/main.2022d1f6.chunk.css.map": "/PortFolio/static/css/main.2022d1f6.chunk.css.map",
+    "static/css/main.f4a7a06b.chunk.css.map": "/PortFolio/static/css/main.f4a7a06b.chunk.css.map",
     "static/media/index.css": "/PortFolio/static/media/NotoSans-Regular.49c56daa.otf",
     "static/media/angular.svg": "/PortFolio/static/media/angular.48ae79d9.svg",
     "static/media/baemin-small.jpg": "/PortFolio/static/media/baemin-small.272e7f80.jpg",
@@ -19,9 +19,9 @@
     "static/media/fast.jpg": "/PortFolio/static/media/fast.7cd22642.jpg",
     "static/media/github.svg": "/PortFolio/static/media/github.0ff1a6f0.svg",
     "static/media/html.svg": "/PortFolio/static/media/html.f0361c5e.svg",
-    "static/media/icon_bulb.svg": "/PortFolio/static/media/icon_bulb.68ffd521.svg",
-    "static/media/icon_communication.svg": "/PortFolio/static/media/icon_communication.a84718ad.svg",
-    "static/media/icon_study.svg": "/PortFolio/static/media/icon_study.a7d187b2.svg",
+    "static/media/icon_bulb.svg": "/PortFolio/static/media/icon_bulb.09cc5413.svg",
+    "static/media/icon_communication.svg": "/PortFolio/static/media/icon_communication.a1b3b6f2.svg",
+    "static/media/icon_study.svg": "/PortFolio/static/media/icon_study.e97045b0.svg",
     "static/media/javascript.svg": "/PortFolio/static/media/javascript.2d2e31cc.svg",
     "static/media/logo.png": "/PortFolio/static/media/logo.0e283a06.png",
     "static/media/megabox-reserve.jpg": "/PortFolio/static/media/megabox-reserve.82751798.jpg",
@@ -38,9 +38,9 @@
     "static/media/typescript.svg": "/PortFolio/static/media/typescript.3de182d2.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.805a6867.js",
-    "static/js/2.7467c8a7.chunk.js",
-    "static/css/main.2022d1f6.chunk.css",
-    "static/js/main.6cb183f6.chunk.js"
+    "static/js/runtime-main.afc0bb32.js",
+    "static/js/2.1f890afb.chunk.js",
+    "static/css/main.f4a7a06b.chunk.css",
+    "static/js/main.63c42a27.chunk.js"
   ]
 }
